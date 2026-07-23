@@ -5,71 +5,77 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Munal Overseas Pvt. Ltd. | Licensed Manpower Recruitment Agency, Nepal</title>
 <meta name="description" content="Munal Overseas Pvt. Ltd. is a government-registered manpower recruitment agency in Nepal, connecting trade-tested Nepali workers with employers across the Gulf, Malaysia and beyond.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230D3D37'/%3E%3Cpath d='M14 40 Q26 14 32 30 Q38 14 50 40 Q40 34 32 40 Q24 34 14 40Z' fill='%23C1793A'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0B14'/%3E%3Cpath d='M14 40 Q26 14 32 30 Q38 14 50 40 Q40 34 32 40 Q24 34 14 40Z' fill='%238B5CF6'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --emerald-950:#0A2E29;
-    --emerald-900:#0D3D37;
-    --emerald-800:#12524A;
-    --teal-600:#1F6F72;
-    --copper-600:#B86A2F;
-    --copper-400:#D68F4E;
-    --paper:#EEF0E9;
-    --paper-dim:#E4E6D9;
-    --ink:#17211E;
-    --ink-soft:#3E4A45;
-    --line:#D8D9C9;
-    --white:#FDFDFB;
-    --radius:2px;
+    --bg:#0A0B14;
+    --bg-alt:#10121F;
+    --card:#141729;
+    --card-hover:#191C33;
+    --border:rgba(255,255,255,0.08);
+    --border-strong:rgba(255,255,255,0.16);
+    --indigo:#5B6EF5;
+    --indigo-light:#8B9CFF;
+    --violet:#8B5CF6;
+    --grad:linear-gradient(135deg,var(--indigo) 0%,var(--violet) 100%);
+    --text:#F4F5FA;
+    --text-dim:#9AA0B4;
+    --text-dimmer:#6B7188;
+    --white:#FFFFFF;
+    --radius:12px;
+    --radius-sm:8px;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
+    margin:0;overflow-x:hidden;
+    background:var(--bg);
+    color:var(--text);
     font-family:'Inter',sans-serif;
-    line-height:1.55;
+    line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
   h1,h2,h3,.display{
-    font-family:'Fraunces',serif;
+    font-family:'Space Grotesk',sans-serif;
     font-weight:600;
-    line-height:1.08;
+    line-height:1.12;
     letter-spacing:-0.01em;
     margin:0;
-    color:var(--emerald-950);
+    color:var(--text);
+  }
+  .grad-text{
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;
   }
   .eyebrow{
     font-family:'IBM Plex Mono',monospace;
     font-size:12px;
     letter-spacing:0.14em;
     text-transform:uppercase;
-    color:var(--copper-600);
+    color:var(--indigo-light);
     font-weight:500;
   }
   a{color:inherit;}
   img{max-width:100%;display:block;}
   .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
-  section{padding:96px 0;}
+  section{padding:96px 0;position:relative;}
   @media(max-width:640px){
-    section{padding:64px 0;}
+    section{padding:56px 0;}
     .wrap{padding:0 20px;}
   }
-  :focus-visible{outline:2px solid var(--copper-600);outline-offset:3px;}
+  :focus-visible{outline:2px solid var(--indigo-light);outline-offset:3px;}
+  ::selection{background:var(--violet);color:#fff;}
 
-  /* ---------- Ridge divider ---------- */
-  .ridge{display:block;width:100%;height:64px;}
-  .ridge-flip{transform:scaleY(-1);}
+  .glow{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0;}
 
   /* ---------- Header ---------- */
   header{
     position:sticky;top:0;z-index:100;
-    background:var(--emerald-950);
-    border-bottom:1px solid rgba(255,255,255,0.08);
+    background:rgba(10,11,20,0.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
   }
   .nav{
     display:flex;align-items:center;justify-content:space-between;
@@ -77,43 +83,37 @@
   }
   .brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
   .brand svg{width:34px;height:34px;flex-shrink:0;}
-  .brand-text{font-family:'Fraunces',serif;font-weight:600;font-size:19px;color:var(--white);letter-spacing:0.01em;}
-  .brand-text span{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.18em;color:var(--copper-400);text-transform:uppercase;font-weight:500;margin-top:1px;}
+  .brand-text{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;color:var(--text);letter-spacing:0.01em;}
+  .brand-text span{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.18em;color:var(--text-dimmer);text-transform:uppercase;font-weight:500;margin-top:1px;}
   nav.links{display:flex;gap:30px;align-items:center;}
   nav.links a{
-    color:rgba(255,255,255,0.82);text-decoration:none;font-size:14.5px;font-weight:500;
-    position:relative;padding:4px 0;
+    color:var(--text-dim);text-decoration:none;font-size:14.5px;font-weight:500;
+    position:relative;padding:4px 0;transition:color .2s ease;
   }
-  nav.links a::after{
-    content:"";position:absolute;left:0;bottom:-2px;width:0;height:1.5px;background:var(--copper-400);
-    transition:width 0.25s ease;
-  }
-  nav.links a:hover::after{width:100%;}
+  nav.links a:hover{color:var(--text);}
   .btn{
     display:inline-flex;align-items:center;gap:8px;
-    padding:11px 22px;border-radius:var(--radius);
+    padding:12px 24px;border-radius:100px;
     font-size:14px;font-weight:600;text-decoration:none;
     border:1px solid transparent;cursor:pointer;
     font-family:'Inter',sans-serif;
-    transition:transform 0.15s ease, background 0.2s ease, border-color .2s ease;
+    transition:transform 0.15s ease, opacity 0.2s ease, border-color .2s ease, background .2s ease;
   }
   .btn:hover{transform:translateY(-1px);}
-  .btn-copper{background:var(--copper-600);color:var(--white);}
-  .btn-copper:hover{background:var(--copper-400);}
-  .btn-outline{border-color:rgba(255,255,255,0.4);color:var(--white);}
-  .btn-outline:hover{border-color:var(--white);}
-  .btn-ghost{border-color:var(--emerald-900);color:var(--emerald-950);}
-  .btn-ghost:hover{background:var(--emerald-950);color:var(--white);}
-  .menu-toggle{display:none;background:none;border:none;color:var(--white);font-size:26px;cursor:pointer;}
+  .btn-primary{background:var(--grad);color:#fff;}
+  .btn-primary:hover{opacity:0.9;}
+  .btn-outline{border-color:var(--border-strong);color:var(--text);background:rgba(255,255,255,0.02);}
+  .btn-outline:hover{border-color:var(--indigo-light);}
+  .menu-toggle{display:none;background:none;border:none;color:var(--text);font-size:26px;cursor:pointer;}
 
   @media(max-width:900px){
     nav.links{
       position:absolute;top:100%;left:0;right:0;
-      background:var(--emerald-950);
+      background:#0D0F1C;
       flex-direction:column;align-items:flex-start;
       padding:20px 32px 28px;gap:18px;
       display:none;
-      border-bottom:1px solid rgba(255,255,255,0.08);
+      border-bottom:1px solid var(--border);
     }
     nav.links.open{display:flex;}
     .menu-toggle{display:block;}
@@ -121,175 +121,214 @@
   }
 
   /* ---------- Hero ---------- */
-  .hero{
-    background:linear-gradient(180deg,var(--emerald-950) 0%, var(--emerald-900) 100%);
-    color:var(--white);position:relative;padding-top:88px;padding-bottom:0;
-    overflow:hidden;
-  }
+  .hero{position:relative;padding-top:88px;padding-bottom:0;overflow:hidden;}
   .hero-inner{
-    max-width:1180px;margin:0 auto;padding:0 32px 90px;
+    max-width:1180px;margin:0 auto;padding:64px 32px 90px;position:relative;z-index:1;
     display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;
   }
-  @media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding-bottom:60px;}}
-  .hero h1{font-size:clamp(34px,4.6vw,58px);color:var(--white);}
-  .hero h1 em{font-style:normal;color:var(--copper-400);}
-  .hero p.lead{font-size:17px;color:rgba(255,255,255,0.78);max-width:46ch;margin-top:20px;}
+  @media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding-bottom:56px;padding-top:40px;}}
+  .hero h1{font-size:clamp(32px,4.6vw,56px);}
+  .hero p.lead{font-size:17px;color:var(--text-dim);max-width:46ch;margin-top:20px;}
   .hero-cta{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
   .license-pill{
     display:inline-flex;align-items:center;gap:8px;margin-bottom:22px;
-    background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);
+    background:rgba(255,255,255,0.04);border:1px solid var(--border-strong);
     padding:7px 14px;border-radius:100px;font-family:'IBM Plex Mono',monospace;
-    font-size:11.5px;letter-spacing:0.04em;color:rgba(255,255,255,0.75);
+    font-size:11.5px;letter-spacing:0.04em;color:var(--text-dim);
   }
-  .license-pill .dot{width:6px;height:6px;border-radius:50%;background:#6FBF8B;}
+  .license-pill .dot{width:6px;height:6px;border-radius:50%;background:#6FE3A0;}
 
   .hero-panel{
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.12);
-    border-radius:4px;padding:30px;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);padding:30px;position:relative;z-index:1;
   }
-  .hero-panel h3{color:var(--white);font-size:17px;margin-bottom:6px;}
-  .hero-panel p{color:rgba(255,255,255,0.68);font-size:14px;margin:0 0 20px;}
+  .hero-panel h3{font-size:17px;margin-bottom:6px;}
+  .hero-panel p{color:var(--text-dim);font-size:14px;margin:0 0 20px;}
   .quickform{display:flex;flex-direction:column;gap:12px;}
   .quickform select, .quickform input{
-    width:100%;padding:12px 14px;border-radius:2px;border:1px solid rgba(255,255,255,0.18);
-    background:rgba(255,255,255,0.04);color:var(--white);font-family:'Inter',sans-serif;font-size:14px;
+    width:100%;padding:12px 14px;border-radius:var(--radius-sm);border:1px solid var(--border-strong);
+    background:rgba(255,255,255,0.03);color:var(--text);font-family:'Inter',sans-serif;font-size:14px;
   }
-  .quickform select option{color:var(--ink);}
-  .quickform ::placeholder{color:rgba(255,255,255,0.45);}
+  .quickform select option{color:#111;}
+  .quickform ::placeholder{color:var(--text-dimmer);}
 
-  .stat-strip{
-    background:var(--emerald-900);border-top:1px solid rgba(255,255,255,0.08);
-  }
+  .stat-strip{background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;z-index:1;}
   .stat-strip .wrap{
     display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:36px 32px;
   }
   @media(max-width:700px){.stat-strip .wrap{grid-template-columns:repeat(2,1fr);}}
-  .stat b{display:block;font-family:'Fraunces',serif;font-size:32px;color:var(--copper-400);font-weight:600;}
-  .stat span{font-size:12.5px;color:rgba(255,255,255,0.65);letter-spacing:0.03em;}
+  .stat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:600;}
+  .stat span{font-size:12.5px;color:var(--text-dim);letter-spacing:0.03em;}
 
   /* ---------- Section headers ---------- */
   .sec-head{max-width:640px;margin-bottom:48px;}
   .sec-head h2{font-size:clamp(26px,3vw,36px);margin-top:10px;}
-  .sec-head p{color:var(--ink-soft);margin-top:14px;font-size:15.5px;}
+  .sec-head p{color:var(--text-dim);margin-top:14px;font-size:15.5px;}
 
   /* ---------- About / Why ---------- */
   .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
   @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px;}}
-  .feature-list{display:flex;flex-direction:column;gap:22px;margin-top:8px;}
-  .feature-list li{list-style:none;display:flex;gap:14px;}
+  .about-grid p{color:var(--text-dim);}
+  .about-grid strong.hl{color:var(--indigo-light);font-weight:600;}
+  .feature-list{display:flex;flex-direction:column;gap:22px;margin-top:8px;list-style:none;padding:0;}
+  .feature-list li{display:flex;gap:14px;}
   .feature-list .mark{
-    flex-shrink:0;width:22px;height:22px;margin-top:2px;
-    border-radius:50%;border:1.5px solid var(--copper-600);
-    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;width:24px;height:24px;margin-top:2px;border-radius:50%;
+    background:var(--grad);display:flex;align-items:center;justify-content:center;
   }
-  .feature-list .mark::after{content:"";width:6px;height:6px;background:var(--copper-600);border-radius:50%;}
-  .feature-list p{margin:0;color:var(--ink-soft);font-size:15px;}
-  .feature-list strong{color:var(--emerald-950);display:block;font-size:15.5px;margin-bottom:2px;font-family:'Inter',sans-serif;}
+  .feature-list .mark svg{width:12px;height:12px;}
+  .feature-list p{margin:0;color:var(--text-dim);font-size:15px;}
+  .feature-list strong{color:var(--text);display:block;font-size:15.5px;margin-bottom:2px;font-family:'Inter',sans-serif;font-weight:600;}
 
-  section.alt{background:var(--white);}
+  section.alt{background:var(--bg-alt);}
 
   /* ---------- Process ---------- */
-  .process-band{background:var(--emerald-950);color:var(--white);position:relative;}
-  .process-band .sec-head h2{color:var(--white);}
-  .process-band .sec-head p{color:rgba(255,255,255,0.7);}
-  .process-band .eyebrow{color:var(--copper-400);}
+  .process-band{background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
   .steps{
     display:grid;grid-template-columns:repeat(5,1fr);gap:0;
-    border-top:1px solid rgba(255,255,255,0.14);
+    border-top:1px solid var(--border);margin-top:8px;
   }
   @media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr);}}
   @media(max-width:560px){.steps{grid-template-columns:1fr;}}
   .step{
-    padding:28px 22px;border-right:1px solid rgba(255,255,255,0.14);
-    border-bottom:1px solid rgba(255,255,255,0.14);
+    padding:28px 22px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);
   }
   .step:last-child{border-right:none;}
-  .step .num{font-family:'IBM Plex Mono',monospace;color:var(--copper-400);font-size:13px;letter-spacing:0.06em;}
-  .step h3{color:var(--white);font-size:16.5px;margin-top:14px;font-weight:600;}
-  .step p{color:rgba(255,255,255,0.66);font-size:13.8px;margin-top:8px;}
+  .step .num{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.06em;}
+  .step .num.grad-text{opacity:0.9;}
+  .step h3{font-size:16.5px;margin-top:14px;font-weight:600;}
+  .step p{color:var(--text-dim);font-size:13.8px;margin-top:8px;}
 
-  /* ---------- Cards grids ---------- */
-  .card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
-  @media(max-width:860px){.card-grid{grid-template-columns:repeat(2,1fr);}}
-  @media(max-width:480px){.card-grid{grid-template-columns:1fr;}}
-  .card{background:var(--paper);padding:26px 22px;transition:background .2s ease;}
-  .card:hover{background:var(--white);}
-  .card .idx{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--copper-600);letter-spacing:0.08em;}
-  .card h3{font-size:16px;margin-top:10px;font-weight:600;}
-  .card p{font-size:13.5px;color:var(--ink-soft);margin-top:6px;}
+  /* ---------- Sector scroll slideshow ---------- */
+  .sector-track{position:relative;}
+  .sector-pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;}
+  .sector-panel{
+    position:absolute;inset:0;display:flex;align-items:center;
+    will-change:transform;
+  }
+  .sector-panel-inner{
+    max-width:1180px;margin:0 auto;padding:0 32px;width:100%;
+    display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;
+  }
+  .sector-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;color:var(--indigo-light);text-transform:uppercase;}
+  .sector-panel h3{font-size:clamp(24px,3vw,38px);margin-top:12px;}
+  .sector-panel p.desc{color:var(--text-dim);font-size:15.5px;margin-top:16px;max-width:48ch;}
+  .tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
+  .tag{
+    font-size:12.5px;font-family:'IBM Plex Mono',monospace;padding:7px 13px;border-radius:100px;
+    border:1px solid var(--border-strong);color:var(--text-dim);background:rgba(255,255,255,0.02);
+  }
+  .sector-media{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);aspect-ratio:4/3;background:var(--card);}
+  .sector-media img{width:100%;height:100%;object-fit:cover;}
+  .sector-progress{
+    position:absolute;left:32px;bottom:32px;display:flex;gap:6px;z-index:5;
+  }
+  .sector-progress .dot{width:22px;height:3px;border-radius:2px;background:var(--border-strong);transition:background .3s ease;}
+  .sector-progress .dot.active{background:var(--grad);}
 
+  @media(max-width:760px){
+    .sector-pin{position:static;height:auto;overflow:visible;display:block;}
+    .sector-panel{position:relative;inset:auto;transform:none !important;padding:56px 0;border-bottom:1px solid var(--border);}
+    .sector-panel-inner{grid-template-columns:1fr;gap:28px;}
+    .sector-progress{display:none;}
+  }
+
+  /* ---------- Country grid ---------- */
   .country-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
   @media(max-width:860px){.country-grid{grid-template-columns:repeat(3,1fr);}}
   @media(max-width:560px){.country-grid{grid-template-columns:repeat(2,1fr);}}
   .country{
-    background:var(--white);border:1px solid var(--line);padding:20px;
-    display:flex;align-items:center;gap:12px;
+    background:var(--card);border:1px solid var(--border);padding:20px;border-radius:var(--radius-sm);
+    display:flex;align-items:center;gap:12px;transition:border-color .2s ease;
   }
+  .country:hover{border-color:var(--border-strong);}
   .country .flag{font-size:22px;}
   .country strong{font-size:14.5px;font-weight:600;}
-  .country span{display:block;font-size:12px;color:var(--ink-soft);}
+  .country span{display:block;font-size:12px;color:var(--text-dim);}
 
   /* ---------- Compliance ---------- */
   .compliance{
-    background:var(--paper-dim);border:1px solid var(--line);
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
     padding:44px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;
   }
-  @media(max-width:700px){.compliance{grid-template-columns:1fr;padding:30px;}}
+  @media(max-width:700px){.compliance{grid-template-columns:1fr;padding:28px;}}
   .compliance .seal{
-    width:84px;height:84px;border-radius:50%;background:var(--emerald-950);
+    width:84px;height:84px;border-radius:50%;background:var(--grad);
     display:flex;align-items:center;justify-content:center;flex-shrink:0;
   }
   .compliance .seal svg{width:40px;height:40px;}
   .compliance h3{font-size:19px;}
-  .compliance p{color:var(--ink-soft);font-size:14.5px;margin-top:8px;}
-  .compliance .lic{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--copper-600);margin-top:10px;display:inline-block;}
+  .compliance p{color:var(--text-dim);font-size:14.5px;margin-top:8px;}
+  .lic-row{display:inline-flex;align-items:center;gap:6px;margin-top:14px;}
+  .lic-row .lic{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--text);}
+  .verified-badge{width:16px;height:16px;flex-shrink:0;}
+
+  .license-tabs{margin-top:28px;}
+  .tab-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;}
+  .tab-btn{
+    font-family:'Inter',sans-serif;font-size:13.5px;font-weight:600;
+    padding:10px 18px;border-radius:100px;border:1px solid var(--border-strong);
+    background:transparent;color:var(--text-dim);cursor:pointer;transition:all .2s ease;
+  }
+  .tab-btn.active{background:var(--grad);color:#fff;border-color:transparent;}
+  .tab-panel{display:none;background:var(--bg);border:1px dashed var(--border-strong);border-radius:var(--radius-sm);padding:40px;text-align:center;color:var(--text-dimmer);font-size:14px;}
+  .tab-panel.active{display:block;}
 
   /* ---------- Testimonials ---------- */
   .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   @media(max-width:860px){.testi-grid{grid-template-columns:1fr;}}
-  .testi{background:var(--white);border:1px solid var(--line);padding:28px;}
-  .testi p.q{font-size:14.5px;color:var(--ink-soft);font-style:italic;}
-  .testi .who{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);}
+  .testi{background:var(--card);border:1px solid var(--border);padding:28px;border-radius:var(--radius);}
+  .testi p.q{font-size:14.5px;color:var(--text-dim);font-style:italic;}
+  .testi .who{margin-top:18px;padding-top:16px;border-top:1px solid var(--border);}
   .testi .who strong{display:block;font-size:14px;}
-  .testi .who span{font-size:12.5px;color:var(--ink-soft);}
+  .testi .who span{font-size:12.5px;color:var(--text-dim);}
 
   /* ---------- CTA ---------- */
   .cta-band{
-    background:var(--copper-600);color:var(--white);text-align:center;padding:72px 32px;
+    background:var(--grad);color:#fff;text-align:center;padding:72px 32px;
   }
-  .cta-band h2{color:var(--white);font-size:clamp(24px,3vw,34px);}
-  .cta-band p{color:rgba(255,255,255,0.85);margin-top:12px;font-size:15.5px;}
+  .cta-band h2{color:#fff;font-size:clamp(24px,3vw,34px);}
+  .cta-band p{color:rgba(255,255,255,0.88);margin-top:12px;font-size:15.5px;}
   .cta-band .hero-cta{justify-content:center;margin-top:26px;}
-  .cta-band .btn-outline{border-color:rgba(255,255,255,0.55);}
+  .cta-band .btn-outline{border-color:rgba(255,255,255,0.55);color:#fff;background:rgba(255,255,255,0.08);}
+  .cta-band .btn-solid-dark{background:#0A0B14;color:#fff;}
 
   /* ---------- Contact ---------- */
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;}
   @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px;}}
   .office{margin-bottom:26px;}
   .office h3{font-size:15px;font-family:'Inter',sans-serif;font-weight:700;}
-  .office p{font-size:14px;color:var(--ink-soft);margin-top:6px;}
+  .office p{font-size:14px;color:var(--text-dim);margin-top:6px;}
   .form-row{display:flex;flex-direction:column;gap:14px;}
-  .form-row input, .form-row textarea{
-    padding:13px 14px;border:1px solid var(--line);background:var(--white);
-    font-family:'Inter',sans-serif;font-size:14px;border-radius:2px;
+  .form-row input, .form-row select, .form-row textarea{
+    padding:13px 14px;border:1px solid var(--border-strong);background:var(--card);color:var(--text);
+    font-family:'Inter',sans-serif;font-size:14px;border-radius:var(--radius-sm);
   }
+  .form-row select{color:var(--text-dim);}
   .form-row textarea{min-height:110px;resize:vertical;}
 
   /* ---------- Footer ---------- */
-  footer{background:var(--emerald-950);color:rgba(255,255,255,0.7);padding:64px 0 28px;}
+  footer{background:#07080F;color:var(--text-dim);padding:64px 0 28px;border-top:1px solid var(--border);}
   .foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;}
   @media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;}}
   @media(max-width:520px){.foot-grid{grid-template-columns:1fr;}}
-  footer h4{color:var(--white);font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-family:'IBM Plex Mono',monospace;font-weight:500;margin-bottom:16px;}
+  footer h4{color:var(--text);font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-family:'IBM Plex Mono',monospace;font-weight:500;margin-bottom:16px;}
   footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;}
-  footer a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;}
-  footer a:hover{color:var(--copper-400);}
+  footer a{color:var(--text-dim);text-decoration:none;font-size:14px;transition:color .2s ease;}
+  footer a:hover{color:var(--text);}
   .foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
   .foot-brand .brand-text{font-size:18px;}
   .foot-bottom{
-    margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:rgba(255,255,255,0.5);
+    margin-top:56px;padding-top:24px;border-top:1px solid var(--border);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--text-dimmer);
+  }
+  .foot-bottom .lic-row{margin-top:0;}
+
+  @media(prefers-reduced-motion:reduce){
+    .sector-pin{position:static !important;height:auto !important;overflow:visible !important;display:block !important;}
+    .sector-panel{position:relative !important;inset:auto !important;transform:none !important;padding:40px 0;}
+    .sector-progress{display:none;}
   }
 </style>
 </head>
@@ -299,8 +338,8 @@
   <div class="nav">
     <a href="#top" class="brand">
       <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect width="64" height="64" rx="12" fill="#0D3D37"/>
-        <path d="M14 40 Q26 14 32 30 Q38 14 50 40 Q40 34 32 40 Q24 34 14 40Z" fill="#D68F4E"/>
+        <rect width="64" height="64" rx="14" fill="#0A0B14"/>
+        <path d="M14 40 Q26 14 32 30 Q38 14 50 40 Q40 34 32 40 Q24 34 14 40Z" fill="#8B5CF6"/>
       </svg>
       <span class="brand-text">Munal Overseas<span>Pvt. Ltd. &nbsp;·&nbsp; Nepal</span></span>
     </a>
@@ -313,18 +352,20 @@
       <a href="#compliance">Compliance</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="#contact" class="btn btn-copper nav-cta">Submit Job Demand</a>
+    <a href="#contact" class="btn btn-primary nav-cta">Submit Job Demand</a>
   </div>
 </header>
 
 <section class="hero" id="top">
+  <div class="glow" style="width:520px;height:520px;background:var(--indigo);opacity:0.22;top:-180px;left:-140px;"></div>
+  <div class="glow" style="width:460px;height:460px;background:var(--violet);opacity:0.18;top:-60px;right:-160px;"></div>
   <div class="hero-inner">
     <div>
       <div class="license-pill"><span class="dot"></span> Government-Registered Recruitment Agency, Nepal</div>
-      <h1>Where Nepali talent<br>takes <em>flight</em>.</h1>
+      <h1>Where Nepali talent<br>takes <span class="grad-text">flight</span>.</h1>
       <p class="lead">Munal Overseas connects skilled, trade-tested Nepali workers with employers across the Gulf, Malaysia and beyond &mdash; through a fully licensed, transparent and ethical recruitment process.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-copper">Request Manpower</a>
+        <a href="#contact" class="btn btn-primary">Request Manpower</a>
         <a href="#industries" class="btn btn-outline">Explore Industries</a>
       </div>
     </div>
@@ -350,24 +391,19 @@
           <option>Malaysia</option>
         </select>
         <input type="tel" placeholder="Your phone number">
-        <button class="btn btn-copper" type="submit" style="justify-content:center;">Notify Me of Openings</button>
+        <button class="btn btn-primary" type="submit" style="justify-content:center;">Notify Me of Openings</button>
       </form>
     </div>
   </div>
-
-  <svg class="ridge" viewBox="0 0 1440 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M0 64 L0 40 L120 18 L240 42 L360 10 L480 36 L620 4 L740 34 L860 14 L980 40 L1100 8 L1220 38 L1440 16 L1440 64 Z" fill="#EEF0E9"/>
-  </svg>
 </section>
 
 <div class="stat-strip">
   <div class="wrap">
-    <div class="stat"><b>15+</b><span>Years Combined Experience</span></div>
-    <div class="stat"><b>1,200+</b><span>Workers Deployed</span></div>
-    <div class="stat"><b>8</b><span>Partner Countries</span></div>
-    <div class="stat"><b>92%</b><span>Employer Renewal Rate</span></div>
+    <div class="stat"><b class="grad-text">23+</b><span>Years of Robust Experience</span></div>
+    <div class="stat"><b class="grad-text">6,000+</b><span>Workers Recruited</span></div>
+    <div class="stat"><b class="grad-text">Multiple</b><span>Countries Served</span></div>
+    <div class="stat"><b class="grad-text">Excellent</b><span>Employer Rate</span></div>
   </div>
-  <!-- TODO: replace placeholder stats above with Munal Overseas' real figures -->
 </div>
 
 <section id="about">
@@ -375,39 +411,39 @@
     <div>
       <div class="eyebrow">About Munal Overseas</div>
       <h2 class="sec-head" style="margin-bottom:0;">A licensed bridge between Nepali workers and global employers.</h2>
-      <p style="color:var(--ink-soft);font-size:15.5px;margin-top:18px;">
+      <p style="font-size:15.5px;margin-top:18px;">
         Munal Overseas Pvt. Ltd. is a government-registered manpower recruitment agency based in Kathmandu, Nepal.
-        We manage the complete recruitment lifecycle &mdash; from sourcing and skill verification to documentation,
-        visa processing and deployment &mdash; so employers abroad can hire with confidence, and workers can migrate safely and legally.
+        We manage the complete recruitment lifecycle &mdash; from <strong class="hl">sourcing</strong> and <strong class="hl">skill verification</strong> to <strong class="hl">documentation</strong>,
+        <strong class="hl">visa processing</strong> and <strong class="hl">deployment</strong> &mdash; so employers abroad can hire with confidence, and workers can migrate safely and legally.
       </p>
-      <p style="color:var(--ink-soft);font-size:15.5px;margin-top:14px;">
+      <p style="font-size:15.5px;margin-top:14px;">
         Named after the Danphe, the Himalayan monal and national bird of Nepal, our name reflects what we do:
         help Nepali workers rise to new heights, wherever in the world opportunity takes them.
       </p>
     </div>
     <ul class="feature-list">
-      <li><span class="mark"></span><p><strong>Verified &amp; skill-tested candidates</strong>Every worker is screened, interviewed and trade-tested before being shortlisted to an employer.</p></li>
-      <li><span class="mark"></span><p><strong>Zero-cost ethical recruitment</strong>No hidden recruitment fees are charged to workers, in line with international labour standards.</p></li>
-      <li><span class="mark"></span><p><strong>Full legal compliance</strong>Labour approval, documentation and visa processing are handled end-to-end under Nepal's Foreign Employment Act.</p></li>
-      <li><span class="mark"></span><p><strong>Post-deployment support</strong>Our team stays reachable after arrival to help resolve issues for both worker and employer.</p></li>
+      <li><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p><strong>Verified &amp; skill-tested candidates</strong>Every worker is screened, interviewed and trade-tested before being shortlisted to an employer.</p></li>
+      <li><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p><strong>Zero-cost ethical recruitment</strong>No hidden recruitment fees are charged to workers, in line with international labour standards.</p></li>
+      <li><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p><strong>Full legal compliance</strong>Labour approval, documentation and visa processing are handled end-to-end under Nepal's Foreign Employment Act.</p></li>
+      <li><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p><strong>Post-deployment support</strong>Our team stays reachable after arrival to help resolve issues for both worker and employer.</p></li>
     </ul>
   </div>
 </section>
 
 <section class="process-band" id="process">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head" style="margin-bottom:0;">
       <div class="eyebrow">How We Work</div>
       <h2>Our recruitment process</h2>
       <p>A clear five-stage pipeline, from your first request to a worker's first day on site.</p>
     </div>
-  </div>
-  <div class="steps">
-    <div class="step"><div class="num">01</div><h3>Manpower Request</h3><p>You share the role, headcount, wage and site requirements with our team.</p></div>
-    <div class="step"><div class="num">02</div><h3>Sourcing &amp; Screening</h3><p>We shortlist candidates through interviews, document checks and background verification.</p></div>
-    <div class="step"><div class="num">03</div><h3>Trade Testing</h3><p>Technical and trade roles are skill-tested before being confirmed to the employer.</p></div>
-    <div class="step"><div class="num">04</div><h3>Documentation &amp; Visa</h3><p>Labour approval, medical checks and visa processing are completed under full legal compliance.</p></div>
-    <div class="step"><div class="num">05</div><h3>Deployment &amp; Follow-up</h3><p>We arrange travel and orientation, and stay in contact after the worker arrives.</p></div>
+    <div class="steps">
+      <div class="step"><div class="num grad-text">01</div><h3>Manpower Request</h3><p>You share the role, headcount, wage and site requirements with our team.</p></div>
+      <div class="step"><div class="num grad-text">02</div><h3>Sourcing &amp; Screening</h3><p>We shortlist candidates through interviews, document checks and background verification.</p></div>
+      <div class="step"><div class="num grad-text">03</div><h3>Trade Testing</h3><p>Technical and trade roles are skill-tested before being confirmed to the employer.</p></div>
+      <div class="step"><div class="num grad-text">04</div><h3>Documentation &amp; Visa</h3><p>Labour approval, medical checks and visa processing are completed under full legal compliance.</p></div>
+      <div class="step"><div class="num grad-text">05</div><h3>Deployment &amp; Follow-up</h3><p>We arrange travel and orientation, and stay in contact after the worker arrives.</p></div>
+    </div>
   </div>
 </section>
 
@@ -416,22 +452,114 @@
     <div class="sec-head">
       <div class="eyebrow">Industries We Serve</div>
       <h2>Sectors we recruit for</h2>
-      <p>From site labour to skilled trades, we supply vetted manpower across the industries employers need most.</p>
+      <p>Scroll through the sectors we supply vetted manpower for &mdash; from site labour to skilled trades.</p>
     </div>
   </div>
-  <div class="wrap">
-    <div class="card-grid">
-      <div class="card"><div class="idx">01</div><h3>Construction &amp; Infrastructure</h3><p>Masons, helpers, steel fixers and site labour.</p></div>
-      <div class="card"><div class="idx">02</div><h3>Hospitality &amp; Hotel</h3><p>Waiters, housekeeping, kitchen and front-office staff.</p></div>
-      <div class="card"><div class="idx">03</div><h3>Facility Management &amp; Cleaning</h3><p>Cleaners, janitorial and building-maintenance teams.</p></div>
-      <div class="card"><div class="idx">04</div><h3>Security Services</h3><p>Trained security guards for commercial and residential sites.</p></div>
-      <div class="card"><div class="idx">05</div><h3>Healthcare &amp; Caregiving</h3><p>Caregivers and support staff for medical facilities.</p></div>
-      <div class="card"><div class="idx">06</div><h3>Logistics &amp; Warehousing</h3><p>Warehouse helpers, drivers and delivery staff.</p></div>
-      <div class="card"><div class="idx">07</div><h3>Manufacturing &amp; Factory Work</h3><p>Production-line and factory floor workers.</p></div>
-      <div class="card"><div class="idx">08</div><h3>Agriculture &amp; Plantation</h3><p>Farm and plantation labour for seasonal and long-term roles.</p></div>
+
+  <div class="sector-track" id="sectorTrack">
+    <div class="sector-pin" id="sectorPin">
+
+      <div class="sector-panel" data-i="0">
+        <div class="sector-panel-inner">
+          <div>
+            <div class="sector-eyebrow">01 &nbsp;·&nbsp; Construction &amp; Infrastructure</div>
+            <h3>Site labour built to <span class="grad-text">deliver on schedule.</span></h3>
+            <p class="desc">Trade-tested masons, steel fixers and helpers for construction and infrastructure sites.</p>
+            <div class="tag-row"><span class="tag">Masons</span><span class="tag">Steel Fixers</span><span class="tag">Site Helpers</span><span class="tag">Equipment Operators</span></div>
+          </div>
+          <div class="sector-media"><img src="https://loremflickr.com/900/700/construction,worker" alt="Construction workers on site" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="sector-panel" data-i="1">
+        <div class="sector-panel-inner">
+          <div>
+            <div class="sector-eyebrow">02 &nbsp;·&nbsp; Hospitality &amp; Hotel</div>
+            <h3>Service staff guests <span class="grad-text">remember.</span></h3>
+            <p class="desc">Waiters, housekeeping, kitchen and front-office staff trained for international hospitality standards.</p>
+            <div class="tag-row"><span class="tag">Waiters</span><span class="tag">Housekeeping</span><span class="tag">Kitchen Staff</span><span class="tag">Front Office</span></div>
+          </div>
+          <div class="sector-media"><img src="https://loremflickr.com/900/700/hotel,hospitality" alt="Hospitality staff" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="sector-panel" data-i="2">
+        <div class="sector-panel-inner">
+          <div>
+            <div class="sector-eyebrow">03 &nbsp;·&nbsp; Facility Management &amp; Cleaning</div>
+            <h3>Clean, maintained <span class="grad-text">every day.</span></h3>
+            <p class="desc">Cleaners, janitorial staff and building-maintenance teams for commercial and residential sites.</p>
+            <div class="tag-row"><span class="tag">Cleaners</span><span class="tag">Janitorial Staff</span><span class="tag">Maintenance Crew</span></div>
+          </div>
+          <div class="sector-media"><img src="https://loremflickr.com/900/700/cleaning,office" alt="Facility cleaning staff" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="sector-panel" data-i="3">
+        <div class="sector-panel-inner">
+          <div>
+            <div class="sector-eyebrow">04 &nbsp;·&nbsp; Security Services</div>
+            <h3>Trained eyes <span class="grad-text">on every site.</span></h3>
+            <p class="desc">Trained security guards and supervisors for commercial, residential and industrial sites.</p>
+            <div class="tag-row"><span class="tag">Security Guards</span><span class="tag">Supervisors</span><span class="tag">Patrol Staff</span></div>
+          </div>
+          <div class="sector-media"><img src="https://loremflickr.com/900/700/security,guard" alt="Security personnel" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="sector-panel" data-i="4">
+        <div class="sector-panel-inner">
+          <div>
+            <div class="sector-eyebrow">05 &nbsp;·&nbsp; Healthcare &amp; Caregiving</div>
+            <h3>Care that <span class="grad-text">shows up.</span></h3>
+            <p class="desc">Caregivers and support staff for hospitals, clinics and elder-care facilities.</p>
+            <div class="tag-row"><span class="tag">Caregivers</span><span class="tag">Support Staff</span><span class="tag">Ward Assistants</span></div>
+          </div>
+          <div class="sector-media"><img src="https://loremflickr.com/900/700/healthcare,caregiver" alt="Healthcare and caregiving staff" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="sector-panel" data-i="5">
+        <div class="sector-panel-inner">
+          <div>
+            <div class="sector-eyebrow">06 &nbsp;·&nbsp; Logistics &amp; Warehousing</div>
+            <h3>Keeping goods <span class="grad-text">moving.</span></h3>
+            <p class="desc">Warehouse helpers, drivers and delivery staff for logistics and distribution operations.</p>
+            <div class="tag-row"><span class="tag">Warehouse Helpers</span><span class="tag">Drivers</span><span class="tag">Delivery Staff</span></div>
+          </div>
+          <div class="sector-media"><img src="https://loremflickr.com/900/700/warehouse,logistics" alt="Warehouse and logistics staff" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="sector-panel" data-i="6">
+        <div class="sector-panel-inner">
+          <div>
+            <div class="sector-eyebrow">07 &nbsp;·&nbsp; Manufacturing &amp; Factory Work</div>
+            <h3>Production lines <span class="grad-text">that don't stop.</span></h3>
+            <p class="desc">Production-line and factory-floor workers for manufacturing operations.</p>
+            <div class="tag-row"><span class="tag">Production Workers</span><span class="tag">Machine Operators</span><span class="tag">QC Helpers</span></div>
+          </div>
+          <div class="sector-media"><img src="https://loremflickr.com/900/700/factory,manufacturing" alt="Factory and manufacturing workers" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="sector-panel" data-i="7">
+        <div class="sector-panel-inner">
+          <div>
+            <div class="sector-eyebrow">08 &nbsp;·&nbsp; Agriculture &amp; Plantation</div>
+            <h3>Hands-on work, <span class="grad-text">season after season.</span></h3>
+            <p class="desc">Farm and plantation labour for seasonal harvests and long-term agricultural roles.</p>
+            <div class="tag-row"><span class="tag">Farm Labour</span><span class="tag">Plantation Workers</span><span class="tag">Harvest Crew</span></div>
+          </div>
+          <div class="sector-media"><img src="https://loremflickr.com/900/700/agriculture,farm" alt="Agriculture and plantation workers" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="sector-progress" id="sectorProgress"></div>
     </div>
   </div>
-  <!-- TODO: adjust industries above to match the sectors Munal Overseas actually recruits for -->
+  <!-- TODO: replace the generic loremflickr placeholder photos above with Munal Overseas' own sector photos -->
+  <!-- TODO: adjust sectors above to match the industries Munal Overseas actually recruits for -->
 </section>
 
 <section id="countries">
@@ -460,18 +588,34 @@
     <div class="compliance">
       <div class="seal">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M12 2 L20 6 V12 C20 17 16.5 20.5 12 22 C7.5 20.5 4 17 4 12 V6 Z" stroke="#D68F4E" stroke-width="1.5"/>
-          <path d="M8.5 12 L11 14.5 L15.5 9.5" stroke="#D68F4E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 2 L20 6 V12 C20 17 16.5 20.5 12 22 C7.5 20.5 4 17 4 12 V6 Z" stroke="#fff" stroke-width="1.5"/>
+          <path d="M8.5 12 L11 14.5 L15.5 9.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
       <div>
         <h3>Licensed &amp; compliant, by design</h3>
-        <p>Munal Overseas Pvt. Ltd. operates under a Department of Foreign Employment (DoFE) recruitment licence, with transparent contracts, verified documentation and a zero-cost policy for worker-side recruitment fees.</p>
-        <span class="lic">Government License No. XXX/XXX/XXX</span>
+        <p>Munal Overseas Pvt Ltd was established in 2003 and since then it is authorized to carry on foreign employment business by the Department of Labour and Employment Promotion under Ministry of Labour &amp; Transport Management.</p>
+        <div class="lic-row">
+          <span class="lic">License No. 465/060/061</span>
+          <svg class="verified-badge" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" aria-label="Verified">
+            <path d="M11 0l2.4 1.2 2.6-.6 1.6 2.1 2.6.9.2 2.7 2 1.7-1 2.6 1 2.6-2 1.7-.2 2.7-2.6.9-1.6 2.1-2.6-.6L11 22l-2.4-1.2-2.6.6-1.6-2.1-2.6-.9-.2-2.7-2-1.7 1-2.6-1-2.6 2-1.7.2-2.7 2.6-.9 1.6-2.1 2.6.6z" fill="#1877F2"/>
+            <path d="M6.5 11.3l3 3 6-6.2" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="license-tabs">
+          <div class="tab-btns" role="tablist" aria-label="View our license documents">
+            <button class="tab-btn active" data-tab="dolep" type="button">View Our License</button>
+            <button class="tab-btn" data-tab="regcert" type="button">Company Registration Certificate</button>
+            <button class="tab-btn" data-tab="pan" type="button">PAN Certificate</button>
+          </div>
+          <div class="tab-panel active" id="tab-dolep">DoLEP recruitment license document will be uploaded here soon.</div>
+          <div class="tab-panel" id="tab-regcert">Company Registration Certificate will be uploaded here soon.</div>
+          <div class="tab-panel" id="tab-pan">PAN Certificate will be uploaded here soon.</div>
+        </div>
       </div>
     </div>
   </div>
-  <!-- TODO: replace the license number above with Munal Overseas' actual DoFE licence number -->
 </section>
 
 <section>
@@ -503,8 +647,8 @@
   <h2>Ready to hire, or ready to go abroad?</h2>
   <p>Whether you're an employer with a manpower requirement or a candidate seeking overseas work, our team is ready to help.</p>
   <div class="hero-cta">
-    <a href="#contact" class="btn btn-outline" style="border-color:rgba(255,255,255,0.7);">Submit Job Demand</a>
-    <a href="#contact" class="btn" style="background:var(--emerald-950);color:#fff;">Apply as a Candidate</a>
+    <a href="#contact" class="btn btn-outline">Submit Job Demand</a>
+    <a href="#contact" class="btn btn-solid-dark">Apply as a Candidate</a>
   </div>
 </div>
 
@@ -514,24 +658,27 @@
       <div class="eyebrow">Contact</div>
       <h2 class="sec-head" style="margin-bottom:28px;">Get in touch</h2>
       <div class="office">
-        <h3>Nepal HQ</h3>
-        <p>Munal Overseas Pvt. Ltd.<br>New Baneshwor, Kathmandu, Nepal<br>Tel: +977-1-XXXXXXX &nbsp;|&nbsp; Email: info@munaloverseas.com</p>
+        <p>Munal Overseas Pvt. Ltd.<br>Kalimatidole, Airport, Kathmandu, Nepal<br>Tel: +977-1-4561297, 4562046<br>Email: munal465@gmail.com</p>
       </div>
       <div class="office">
         <h3>Office Hours</h3>
-        <p>Sunday &ndash; Friday, 10:00 AM &ndash; 5:00 PM (Nepal Time)</p>
+        <p>Monday to Friday, 9:00 AM &ndash; 5:00 PM (GMT+5:45)</p>
       </div>
-      <!-- TODO: replace address, phone and email above with Munal Overseas' real contact details -->
+      <!-- TODO: confirm the address above matches Munal Overseas' exact registered office location -->
     </div>
     <div>
       <form class="form-row" onsubmit="return false;">
         <input type="text" placeholder="Full name" required>
         <input type="email" placeholder="Email address" required>
-        <input type="text" placeholder="I am an... (Employer / Job Seeker)">
+        <input type="tel" placeholder="Mobile number" required>
+        <select aria-label="I am an...">
+          <option value="">I am a...</option>
+          <option value="employer">Employer</option>
+          <option value="jobseeker">Job Seeker</option>
+        </select>
         <textarea placeholder="Tell us about your requirement or query"></textarea>
-        <button class="btn btn-ghost" type="submit">Send Message</button>
+        <button class="btn btn-primary" type="submit">Send Message</button>
       </form>
-      <p style="font-size:12.5px;color:var(--ink-soft);margin-top:10px;">This form is static &mdash; connect it to a service like Formspree or a backend to actually receive messages.</p>
     </div>
   </div>
 </section>
@@ -542,10 +689,10 @@
       <div>
         <div class="foot-brand">
           <svg viewBox="0 0 64 64" width="30" height="30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="64" height="64" rx="12" fill="#12524A"/>
-            <path d="M14 40 Q26 14 32 30 Q38 14 50 40 Q40 34 32 40 Q24 34 14 40Z" fill="#D68F4E"/>
+            <rect width="64" height="64" rx="14" fill="#141729"/>
+            <path d="M14 40 Q26 14 32 30 Q38 14 50 40 Q40 34 32 40 Q24 34 14 40Z" fill="#8B5CF6"/>
           </svg>
-          <span class="brand-text" style="color:#fff;">Munal Overseas</span>
+          <span class="brand-text">Munal Overseas</span>
         </div>
         <p style="font-size:13.5px;max-width:32ch;">Government-registered manpower recruitment agency connecting Nepali workers with employers worldwide.</p>
       </div>
@@ -576,7 +723,12 @@
     </div>
     <div class="foot-bottom">
       <span>&copy; 2026 Munal Overseas Pvt. Ltd. All rights reserved.</span>
-      <span>Government License No. XXX/XXX/XXX</span>
+      <span class="lic-row">License No. 465/060/061
+        <svg class="verified-badge" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" aria-label="Verified">
+          <path d="M11 0l2.4 1.2 2.6-.6 1.6 2.1 2.6.9.2 2.7 2 1.7-1 2.6 1 2.6-2 1.7-.2 2.7-2.6.9-1.6 2.1-2.6-.6L11 22l-2.4-1.2-2.6.6-1.6-2.1-2.6-.9-.2-2.7-2-1.7 1-2.6-1-2.6 2-1.7.2-2.7 2.6-.9 1.6-2.1 2.6.6z" fill="#1877F2"/>
+          <path d="M6.5 11.3l3 3 6-6.2" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
     </div>
   </div>
 </footer>
@@ -588,6 +740,75 @@
   document.querySelectorAll('#navLinks a').forEach(function(a){
     a.addEventListener('click', function(){ document.getElementById('navLinks').classList.remove('open'); });
   });
+
+  /* License document tabs */
+  document.querySelectorAll('.tab-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  /* Sector scroll slideshow (desktop/tablet only — mobile uses static stacked layout via CSS) */
+  (function(){
+    var track = document.getElementById('sectorTrack');
+    var panels = Array.prototype.slice.call(document.querySelectorAll('.sector-panel'));
+    var progressWrap = document.getElementById('sectorProgress');
+    var mq = window.matchMedia('(max-width:760px)');
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    panels.forEach(function(_, i){
+      var d = document.createElement('span');
+      d.className = 'dot' + (i === 0 ? ' active' : '');
+      progressWrap.appendChild(d);
+    });
+    var dots = progressWrap.querySelectorAll('.dot');
+
+    function setTrackHeight(){
+      track.style.height = (panels.length * 100) + 'vh';
+    }
+
+    function update(){
+      if(mq.matches || reduceMotion) return;
+      var rect = track.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var total = track.offsetHeight - vh;
+      var progress = total > 0 ? Math.max(0, Math.min(1, -rect.top / total)) : 0;
+      var idxFloat = progress * (panels.length - 1);
+      var activeIdx = Math.round(idxFloat);
+
+      panels.forEach(function(panel, i){
+        if(i === 0){
+          panel.style.transform = 'translateY(0%)';
+          panel.style.zIndex = 1;
+          return;
+        }
+        var raw = idxFloat - (i - 1);
+        var clamped = Math.max(0, Math.min(1, raw));
+        panel.style.transform = 'translateY(' + ((1 - clamped) * 100) + '%)';
+        panel.style.zIndex = i + 1;
+      });
+
+      dots.forEach(function(d, i){ d.classList.toggle('active', i === activeIdx); });
+    }
+
+    function onScroll(){ window.requestAnimationFrame(update); }
+
+    function init(){
+      if(mq.matches || reduceMotion){
+        track.style.height = 'auto';
+        return;
+      }
+      setTrackHeight();
+      update();
+    }
+
+    window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('resize', init);
+    init();
+  })();
 </script>
 
 </body>
