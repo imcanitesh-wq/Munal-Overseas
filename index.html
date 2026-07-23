@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Munal Overseas Pvt. Ltd. | Licensed Manpower Recruitment Agency, Nepal</title>
+<meta name="description" content="Munal Overseas Pvt. Ltd. is a government-registered manpower recruitment agency in Nepal, connecting trade-tested Nepali workers with employers across the Gulf, Malaysia and beyond.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230D3D37'/%3E%3Cpath d='M14 40 Q26 14 32 30 Q38 14 50 40 Q40 34 32 40 Q24 34 14 40Z' fill='%23C1793A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --emerald-950:#0A2E29;
+    --emerald-900:#0D3D37;
+    --emerald-800:#12524A;
+    --teal-600:#1F6F72;
+    --copper-600:#B86A2F;
+    --copper-400:#D68F4E;
+    --paper:#EEF0E9;
+    --paper-dim:#E4E6D9;
+    --ink:#17211E;
+    --ink-soft:#3E4A45;
+    --line:#D8D9C9;
+    --white:#FDFDFB;
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    line-height:1.08;
+    letter-spacing:-0.01em;
+    margin:0;
+    color:var(--emerald-950);
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--copper-600);
+    font-weight:500;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  section{padding:96px 0;}
+  @media(max-width:640px){
+    section{padding:64px 0;}
+    .wrap{padding:0 20px;}
+  }
+  :focus-visible{outline:2px solid var(--copper-600);outline-offset:3px;}
+
+  /* ---------- Ridge divider ---------- */
+  .ridge{display:block;width:100%;height:64px;}
+  .ridge-flip{transform:scaleY(-1);}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:var(--emerald-950);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 32px;max-width:1180px;margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+  .brand svg{width:34px;height:34px;flex-shrink:0;}
+  .brand-text{font-family:'Fraunces',serif;font-weight:600;font-size:19px;color:var(--white);letter-spacing:0.01em;}
+  .brand-text span{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.18em;color:var(--copper-400);text-transform:uppercase;font-weight:500;margin-top:1px;}
+  nav.links{display:flex;gap:30px;align-items:center;}
+  nav.links a{
+    color:rgba(255,255,255,0.82);text-decoration:none;font-size:14.5px;font-weight:500;
+    position:relative;padding:4px 0;
+  }
+  nav.links a::after{
+    content:"";position:absolute;left:0;bottom:-2px;width:0;height:1.5px;background:var(--copper-400);
+    transition:width 0.25s ease;
+  }
+  nav.links a:hover::after{width:100%;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 22px;border-radius:var(--radius);
+    font-size:14px;font-weight:600;text-decoration:none;
+    border:1px solid transparent;cursor:pointer;
+    font-family:'Inter',sans-serif;
+    transition:transform 0.15s ease, background 0.2s ease, border-color .2s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-copper{background:var(--copper-600);color:var(--white);}
+  .btn-copper:hover{background:var(--copper-400);}
+  .btn-outline{border-color:rgba(255,255,255,0.4);color:var(--white);}
+  .btn-outline:hover{border-color:var(--white);}
+  .btn-ghost{border-color:var(--emerald-900);color:var(--emerald-950);}
+  .btn-ghost:hover{background:var(--emerald-950);color:var(--white);}
+  .menu-toggle{display:none;background:none;border:none;color:var(--white);font-size:26px;cursor:pointer;}
+
+  @media(max-width:900px){
+    nav.links{
+      position:absolute;top:100%;left:0;right:0;
+      background:var(--emerald-950);
+      flex-direction:column;align-items:flex-start;
+      padding:20px 32px 28px;gap:18px;
+      display:none;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+    nav.links.open{display:flex;}
+    .menu-toggle{display:block;}
+    .nav-cta{display:none;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:linear-gradient(180deg,var(--emerald-950) 0%, var(--emerald-900) 100%);
+    color:var(--white);position:relative;padding-top:88px;padding-bottom:0;
+    overflow:hidden;
+  }
+  .hero-inner{
+    max-width:1180px;margin:0 auto;padding:0 32px 90px;
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;
+  }
+  @media(max-width:900px){.hero-inner{grid-template-columns:1fr;padding-bottom:60px;}}
+  .hero h1{font-size:clamp(34px,4.6vw,58px);color:var(--white);}
+  .hero h1 em{font-style:normal;color:var(--copper-400);}
+  .hero p.lead{font-size:17px;color:rgba(255,255,255,0.78);max-width:46ch;margin-top:20px;}
+  .hero-cta{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
+  .license-pill{
+    display:inline-flex;align-items:center;gap:8px;margin-bottom:22px;
+    background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);
+    padding:7px 14px;border-radius:100px;font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;letter-spacing:0.04em;color:rgba(255,255,255,0.75);
+  }
+  .license-pill .dot{width:6px;height:6px;border-radius:50%;background:#6FBF8B;}
+
+  .hero-panel{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:4px;padding:30px;
+  }
+  .hero-panel h3{color:var(--white);font-size:17px;margin-bottom:6px;}
+  .hero-panel p{color:rgba(255,255,255,0.68);font-size:14px;margin:0 0 20px;}
+  .quickform{display:flex;flex-direction:column;gap:12px;}
+  .quickform select, .quickform input{
+    width:100%;padding:12px 14px;border-radius:2px;border:1px solid rgba(255,255,255,0.18);
+    background:rgba(255,255,255,0.04);color:var(--white);font-family:'Inter',sans-serif;font-size:14px;
+  }
+  .quickform select option{color:var(--ink);}
+  .quickform ::placeholder{color:rgba(255,255,255,0.45);}
+
+  .stat-strip{
+    background:var(--emerald-900);border-top:1px solid rgba(255,255,255,0.08);
+  }
+  .stat-strip .wrap{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:36px 32px;
+  }
+  @media(max-width:700px){.stat-strip .wrap{grid-template-columns:repeat(2,1fr);}}
+  .stat b{display:block;font-family:'Fraunces',serif;font-size:32px;color:var(--copper-400);font-weight:600;}
+  .stat span{font-size:12.5px;color:rgba(255,255,255,0.65);letter-spacing:0.03em;}
+
+  /* ---------- Section headers ---------- */
+  .sec-head{max-width:640px;margin-bottom:48px;}
+  .sec-head h2{font-size:clamp(26px,3vw,36px);margin-top:10px;}
+  .sec-head p{color:var(--ink-soft);margin-top:14px;font-size:15.5px;}
+
+  /* ---------- About / Why ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px;}}
+  .feature-list{display:flex;flex-direction:column;gap:22px;margin-top:8px;}
+  .feature-list li{list-style:none;display:flex;gap:14px;}
+  .feature-list .mark{
+    flex-shrink:0;width:22px;height:22px;margin-top:2px;
+    border-radius:50%;border:1.5px solid var(--copper-600);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .feature-list .mark::after{content:"";width:6px;height:6px;background:var(--copper-600);border-radius:50%;}
+  .feature-list p{margin:0;color:var(--ink-soft);font-size:15px;}
+  .feature-list strong{color:var(--emerald-950);display:block;font-size:15.5px;margin-bottom:2px;font-family:'Inter',sans-serif;}
+
+  section.alt{background:var(--white);}
+
+  /* ---------- Process ---------- */
+  .process-band{background:var(--emerald-950);color:var(--white);position:relative;}
+  .process-band .sec-head h2{color:var(--white);}
+  .process-band .sec-head p{color:rgba(255,255,255,0.7);}
+  .process-band .eyebrow{color:var(--copper-400);}
+  .steps{
+    display:grid;grid-template-columns:repeat(5,1fr);gap:0;
+    border-top:1px solid rgba(255,255,255,0.14);
+  }
+  @media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.steps{grid-template-columns:1fr;}}
+  .step{
+    padding:28px 22px;border-right:1px solid rgba(255,255,255,0.14);
+    border-bottom:1px solid rgba(255,255,255,0.14);
+  }
+  .step:last-child{border-right:none;}
+  .step .num{font-family:'IBM Plex Mono',monospace;color:var(--copper-400);font-size:13px;letter-spacing:0.06em;}
+  .step h3{color:var(--white);font-size:16.5px;margin-top:14px;font-weight:600;}
+  .step p{color:rgba(255,255,255,0.66);font-size:13.8px;margin-top:8px;}
+
+  /* ---------- Cards grids ---------- */
+  .card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media(max-width:860px){.card-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:480px){.card-grid{grid-template-columns:1fr;}}
+  .card{background:var(--paper);padding:26px 22px;transition:background .2s ease;}
+  .card:hover{background:var(--white);}
+  .card .idx{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--copper-600);letter-spacing:0.08em;}
+  .card h3{font-size:16px;margin-top:10px;font-weight:600;}
+  .card p{font-size:13.5px;color:var(--ink-soft);margin-top:6px;}
+
+  .country-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  @media(max-width:860px){.country-grid{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:560px){.country-grid{grid-template-columns:repeat(2,1fr);}}
+  .country{
+    background:var(--white);border:1px solid var(--line);padding:20px;
+    display:flex;align-items:center;gap:12px;
+  }
+  .country .flag{font-size:22px;}
+  .country strong{font-size:14.5px;font-weight:600;}
+  .country span{display:block;font-size:12px;color:var(--ink-soft);}
+
+  /* ---------- Compliance ---------- */
+  .compliance{
+    background:var(--paper-dim);border:1px solid var(--line);
+    padding:44px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;
+  }
+  @media(max-width:700px){.compliance{grid-template-columns:1fr;padding:30px;}}
+  .compliance .seal{
+    width:84px;height:84px;border-radius:50%;background:var(--emerald-950);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .compliance .seal svg{width:40px;height:40px;}
+  .compliance h3{font-size:19px;}
+  .compliance p{color:var(--ink-soft);font-size:14.5px;margin-top:8px;}
+  .compliance .lic{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--copper-600);margin-top:10px;display:inline-block;}
+
+  /* ---------- Testimonials ---------- */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  @media(max-width:860px){.testi-grid{grid-template-columns:1fr;}}
+  .testi{background:var(--white);border:1px solid var(--line);padding:28px;}
+  .testi p.q{font-size:14.5px;color:var(--ink-soft);font-style:italic;}
+  .testi .who{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);}
+  .testi .who strong{display:block;font-size:14px;}
+  .testi .who span{font-size:12.5px;color:var(--ink-soft);}
+
+  /* ---------- CTA ---------- */
+  .cta-band{
+    background:var(--copper-600);color:var(--white);text-align:center;padding:72px 32px;
+  }
+  .cta-band h2{color:var(--white);font-size:clamp(24px,3vw,34px);}
+  .cta-band p{color:rgba(255,255,255,0.85);margin-top:12px;font-size:15.5px;}
+  .cta-band .hero-cta{justify-content:center;margin-top:26px;}
+  .cta-band .btn-outline{border-color:rgba(255,255,255,0.55);}
+
+  /* ---------- Contact ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;}
+  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px;}}
+  .office{margin-bottom:26px;}
+  .office h3{font-size:15px;font-family:'Inter',sans-serif;font-weight:700;}
+  .office p{font-size:14px;color:var(--ink-soft);margin-top:6px;}
+  .form-row{display:flex;flex-direction:column;gap:14px;}
+  .form-row input, .form-row textarea{
+    padding:13px 14px;border:1px solid var(--line);background:var(--white);
+    font-family:'Inter',sans-serif;font-size:14px;border-radius:2px;
+  }
+  .form-row textarea{min-height:110px;resize:vertical;}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--emerald-950);color:rgba(255,255,255,0.7);padding:64px 0 28px;}
+  .foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;}
+  @media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:520px){.foot-grid{grid-template-columns:1fr;}}
+  footer h4{color:var(--white);font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-family:'IBM Plex Mono',monospace;font-weight:500;margin-bottom:16px;}
+  footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;}
+  footer a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;}
+  footer a:hover{color:var(--copper-400);}
+  .foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .foot-brand .brand-text{font-size:18px;}
+  .foot-bottom{
+    margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:rgba(255,255,255,0.5);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#top" class="brand">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="64" height="64" rx="12" fill="#0D3D37"/>
+        <path d="M14 40 Q26 14 32 30 Q38 14 50 40 Q40 34 32 40 Q24 34 14 40Z" fill="#D68F4E"/>
+      </svg>
+      <span class="brand-text">Munal Overseas<span>Pvt. Ltd. &nbsp;·&nbsp; Nepal</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav class="links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#industries">Industries</a>
+      <a href="#countries">Countries</a>
+      <a href="#process">Process</a>
+      <a href="#compliance">Compliance</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-copper nav-cta">Submit Job Demand</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <div class="license-pill"><span class="dot"></span> Government-Registered Recruitment Agency, Nepal</div>
+      <h1>Where Nepali talent<br>takes <em>flight</em>.</h1>
+      <p class="lead">Munal Overseas connects skilled, trade-tested Nepali workers with employers across the Gulf, Malaysia and beyond &mdash; through a fully licensed, transparent and ethical recruitment process.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-copper">Request Manpower</a>
+        <a href="#industries" class="btn btn-outline">Explore Industries</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <h3>Looking for overseas work?</h3>
+      <p>Tell us your trade and preferred destination &mdash; our team will reach out with current openings.</p>
+      <form class="quickform" onsubmit="return false;">
+        <select aria-label="Select industry">
+          <option>Select your trade / industry</option>
+          <option>Construction &amp; Infrastructure</option>
+          <option>Hospitality &amp; Hotel</option>
+          <option>Facility Management &amp; Cleaning</option>
+          <option>Security Services</option>
+          <option>Healthcare &amp; Caregiving</option>
+          <option>Logistics &amp; Warehousing</option>
+        </select>
+        <select aria-label="Select country">
+          <option>Preferred country</option>
+          <option>UAE</option>
+          <option>Qatar</option>
+          <option>Saudi Arabia</option>
+          <option>Kuwait</option>
+          <option>Malaysia</option>
+        </select>
+        <input type="tel" placeholder="Your phone number">
+        <button class="btn btn-copper" type="submit" style="justify-content:center;">Notify Me of Openings</button>
+      </form>
+    </div>
+  </div>
+
+  <svg class="ridge" viewBox="0 0 1440 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M0 64 L0 40 L120 18 L240 42 L360 10 L480 36 L620 4 L740 34 L860 14 L980 40 L1100 8 L1220 38 L1440 16 L1440 64 Z" fill="#EEF0E9"/>
+  </svg>
+</section>
+
+<div class="stat-strip">
+  <div class="wrap">
+    <div class="stat"><b>15+</b><span>Years Combined Experience</span></div>
+    <div class="stat"><b>1,200+</b><span>Workers Deployed</span></div>
+    <div class="stat"><b>8</b><span>Partner Countries</span></div>
+    <div class="stat"><b>92%</b><span>Employer Renewal Rate</span></div>
+  </div>
+  <!-- TODO: replace placeholder stats above with Munal Overseas' real figures -->
+</div>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="eyebrow">About Munal Overseas</div>
+      <h2 class="sec-head" style="margin-bottom:0;">A licensed bridge between Nepali workers and global employers.</h2>
+      <p style="color:var(--ink-soft);font-size:15.5px;margin-top:18px;">
+        Munal Overseas Pvt. Ltd. is a government-registered manpower recruitment agency based in Kathmandu, Nepal.
+        We manage the complete recruitment lifecycle &mdash; from sourcing and skill verification to documentation,
+        visa processing and deployment &mdash; so employers abroad can hire with confidence, and workers can migrate safely and legally.
+      </p>
+      <p style="color:var(--ink-soft);font-size:15.5px;margin-top:14px;">
+        Named after the Danphe, the Himalayan monal and national bird of Nepal, our name reflects what we do:
+        help Nepali workers rise to new heights, wherever in the world opportunity takes them.
+      </p>
+    </div>
+    <ul class="feature-list">
+      <li><span class="mark"></span><p><strong>Verified &amp; skill-tested candidates</strong>Every worker is screened, interviewed and trade-tested before being shortlisted to an employer.</p></li>
+      <li><span class="mark"></span><p><strong>Zero-cost ethical recruitment</strong>No hidden recruitment fees are charged to workers, in line with international labour standards.</p></li>
+      <li><span class="mark"></span><p><strong>Full legal compliance</strong>Labour approval, documentation and visa processing are handled end-to-end under Nepal's Foreign Employment Act.</p></li>
+      <li><span class="mark"></span><p><strong>Post-deployment support</strong>Our team stays reachable after arrival to help resolve issues for both worker and employer.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="process-band" id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">How We Work</div>
+      <h2>Our recruitment process</h2>
+      <p>A clear five-stage pipeline, from your first request to a worker's first day on site.</p>
+    </div>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="num">01</div><h3>Manpower Request</h3><p>You share the role, headcount, wage and site requirements with our team.</p></div>
+    <div class="step"><div class="num">02</div><h3>Sourcing &amp; Screening</h3><p>We shortlist candidates through interviews, document checks and background verification.</p></div>
+    <div class="step"><div class="num">03</div><h3>Trade Testing</h3><p>Technical and trade roles are skill-tested before being confirmed to the employer.</p></div>
+    <div class="step"><div class="num">04</div><h3>Documentation &amp; Visa</h3><p>Labour approval, medical checks and visa processing are completed under full legal compliance.</p></div>
+    <div class="step"><div class="num">05</div><h3>Deployment &amp; Follow-up</h3><p>We arrange travel and orientation, and stay in contact after the worker arrives.</p></div>
+  </div>
+</section>
+
+<section class="alt" id="industries">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Industries We Serve</div>
+      <h2>Sectors we recruit for</h2>
+      <p>From site labour to skilled trades, we supply vetted manpower across the industries employers need most.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="card-grid">
+      <div class="card"><div class="idx">01</div><h3>Construction &amp; Infrastructure</h3><p>Masons, helpers, steel fixers and site labour.</p></div>
+      <div class="card"><div class="idx">02</div><h3>Hospitality &amp; Hotel</h3><p>Waiters, housekeeping, kitchen and front-office staff.</p></div>
+      <div class="card"><div class="idx">03</div><h3>Facility Management &amp; Cleaning</h3><p>Cleaners, janitorial and building-maintenance teams.</p></div>
+      <div class="card"><div class="idx">04</div><h3>Security Services</h3><p>Trained security guards for commercial and residential sites.</p></div>
+      <div class="card"><div class="idx">05</div><h3>Healthcare &amp; Caregiving</h3><p>Caregivers and support staff for medical facilities.</p></div>
+      <div class="card"><div class="idx">06</div><h3>Logistics &amp; Warehousing</h3><p>Warehouse helpers, drivers and delivery staff.</p></div>
+      <div class="card"><div class="idx">07</div><h3>Manufacturing &amp; Factory Work</h3><p>Production-line and factory floor workers.</p></div>
+      <div class="card"><div class="idx">08</div><h3>Agriculture &amp; Plantation</h3><p>Farm and plantation labour for seasonal and long-term roles.</p></div>
+    </div>
+  </div>
+  <!-- TODO: adjust industries above to match the sectors Munal Overseas actually recruits for -->
+</section>
+
+<section id="countries">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Countries We Serve</div>
+      <h2>Where our workers are deployed</h2>
+      <p>Active partnerships with employers across the following labour markets.</p>
+    </div>
+    <div class="country-grid">
+      <div class="country"><span class="flag">🇦🇪</span><div><strong>UAE</strong><span>Dubai &amp; Abu Dhabi</span></div></div>
+      <div class="country"><span class="flag">🇶🇦</span><div><strong>Qatar</strong><span>Doha</span></div></div>
+      <div class="country"><span class="flag">🇸🇦</span><div><strong>Saudi Arabia</strong><span>Riyadh &amp; Jeddah</span></div></div>
+      <div class="country"><span class="flag">🇰🇼</span><div><strong>Kuwait</strong><span>Kuwait City</span></div></div>
+      <div class="country"><span class="flag">🇲🇾</span><div><strong>Malaysia</strong><span>Kuala Lumpur</span></div></div>
+      <div class="country"><span class="flag">🇧🇭</span><div><strong>Bahrain</strong><span>Manama</span></div></div>
+      <div class="country"><span class="flag">🇴🇲</span><div><strong>Oman</strong><span>Muscat</span></div></div>
+      <div class="country"><span class="flag">🇷🇴</span><div><strong>Romania</strong><span>Bucharest</span></div></div>
+    </div>
+  </div>
+  <!-- TODO: adjust countries above to match Munal Overseas' real destination markets -->
+</section>
+
+<section class="alt" id="compliance">
+  <div class="wrap">
+    <div class="compliance">
+      <div class="seal">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2 L20 6 V12 C20 17 16.5 20.5 12 22 C7.5 20.5 4 17 4 12 V6 Z" stroke="#D68F4E" stroke-width="1.5"/>
+          <path d="M8.5 12 L11 14.5 L15.5 9.5" stroke="#D68F4E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div>
+        <h3>Licensed &amp; compliant, by design</h3>
+        <p>Munal Overseas Pvt. Ltd. operates under a Department of Foreign Employment (DoFE) recruitment licence, with transparent contracts, verified documentation and a zero-cost policy for worker-side recruitment fees.</p>
+        <span class="lic">Government License No. XXX/XXX/XXX</span>
+      </div>
+    </div>
+  </div>
+  <!-- TODO: replace the license number above with Munal Overseas' actual DoFE licence number -->
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Testimonials</div>
+      <h2>Real people, real placements</h2>
+      <p>Sample testimonials &mdash; replace with real feedback from your workers and employer partners.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi">
+        <p class="q">"Munal Overseas handled every step, from documentation to my flight ticket. I now work as a housekeeping supervisor in Doha and support my family back home."</p>
+        <div class="who"><strong>Sample Candidate Name</strong><span>Housekeeping Supervisor, Qatar</span></div>
+      </div>
+      <div class="testi">
+        <p class="q">"We've hired site labour through Munal Overseas for two projects now. The vetting was thorough and every worker showed up ready and well-prepared."</p>
+        <div class="who"><strong>Sample Employer Name</strong><span>Construction Firm, UAE</span></div>
+      </div>
+      <div class="testi">
+        <p class="q">"Transparent process from the start &mdash; no hidden costs, clear timelines, and their team followed up with me even after I arrived."</p>
+        <div class="who"><strong>Sample Candidate Name</strong><span>Security Officer, Malaysia</span></div>
+      </div>
+    </div>
+  </div>
+  <!-- TODO: replace sample testimonials above with real quotes once available -->
+</section>
+
+<div class="cta-band">
+  <h2>Ready to hire, or ready to go abroad?</h2>
+  <p>Whether you're an employer with a manpower requirement or a candidate seeking overseas work, our team is ready to help.</p>
+  <div class="hero-cta">
+    <a href="#contact" class="btn btn-outline" style="border-color:rgba(255,255,255,0.7);">Submit Job Demand</a>
+    <a href="#contact" class="btn" style="background:var(--emerald-950);color:#fff;">Apply as a Candidate</a>
+  </div>
+</div>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2 class="sec-head" style="margin-bottom:28px;">Get in touch</h2>
+      <div class="office">
+        <h3>Nepal HQ</h3>
+        <p>Munal Overseas Pvt. Ltd.<br>New Baneshwor, Kathmandu, Nepal<br>Tel: +977-1-XXXXXXX &nbsp;|&nbsp; Email: info@munaloverseas.com</p>
+      </div>
+      <div class="office">
+        <h3>Office Hours</h3>
+        <p>Sunday &ndash; Friday, 10:00 AM &ndash; 5:00 PM (Nepal Time)</p>
+      </div>
+      <!-- TODO: replace address, phone and email above with Munal Overseas' real contact details -->
+    </div>
+    <div>
+      <form class="form-row" onsubmit="return false;">
+        <input type="text" placeholder="Full name" required>
+        <input type="email" placeholder="Email address" required>
+        <input type="text" placeholder="I am an... (Employer / Job Seeker)">
+        <textarea placeholder="Tell us about your requirement or query"></textarea>
+        <button class="btn btn-ghost" type="submit">Send Message</button>
+      </form>
+      <p style="font-size:12.5px;color:var(--ink-soft);margin-top:10px;">This form is static &mdash; connect it to a service like Formspree or a backend to actually receive messages.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" width="30" height="30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="64" height="64" rx="12" fill="#12524A"/>
+            <path d="M14 40 Q26 14 32 30 Q38 14 50 40 Q40 34 32 40 Q24 34 14 40Z" fill="#D68F4E"/>
+          </svg>
+          <span class="brand-text" style="color:#fff;">Munal Overseas</span>
+        </div>
+        <p style="font-size:13.5px;max-width:32ch;">Government-registered manpower recruitment agency connecting Nepali workers with employers worldwide.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#compliance">Compliance</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Employers &amp; Workers</h4>
+        <ul>
+          <li><a href="#contact">Submit Job Demand</a></li>
+          <li><a href="#industries">Industries We Serve</a></li>
+          <li><a href="#countries">Countries We Serve</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Munal Overseas Pvt. Ltd. All rights reserved.</span>
+      <span>Government License No. XXX/XXX/XXX</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('menuToggle').addEventListener('click', function(){
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.querySelectorAll('#navLinks a').forEach(function(a){
+    a.addEventListener('click', function(){ document.getElementById('navLinks').classList.remove('open'); });
+  });
+</script>
+
+</body>
+</html>
