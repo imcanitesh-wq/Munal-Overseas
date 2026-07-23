@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Munal Overseas Pvt. Ltd. | Licensed Manpower Recruitment Agency, Nepal</title>
-<meta name="description" content="Munal Overseas Pvt. Ltd. is a government-registered manpower recruitment agency in Nepal, connecting trade-tested Nepali workers with employers across the Gulf, Malaysia and beyond.">
+<meta name="description" content="Munal Overseas Pvt. Ltd. is a government-registered manpower recruitment agency in Nepal, connecting trade-tested Nepali workers with employers across the Gulf, Malaysia, Europe and beyond.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FAF8F5'/%3E%3Cpath d='M14 40 Q26 14 32 30 Q38 14 50 40 Q40 34 32 40 Q24 34 14 40Z' fill='%234F46E5'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +12,6 @@
 <style>
   /* ==========================================================================
      Himalayan Monal (Danphe) Light Creamy Palette System
-     Inspired by Nepal's national bird: Soft Cream background, vibrant 
-     metallic sky blue, royal indigo, peacock purple & bright white accents.
      ========================================================================== */
   :root {
     --bg: #FAF8F5;                  /* Soft White Creamy Background */
@@ -112,6 +110,18 @@
 
   a { color: inherit; text-decoration: none; }
   img { max-width: 100%; display: block; }
+
+  .email-link {
+    color: var(--monal-indigo);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  .email-link:hover {
+    color: var(--monal-blue);
+  }
   
   .wrap {
     max-width: 1200px;
@@ -140,7 +150,7 @@
     z-index: 0;
   }
 
-  /* ---------- Mobile Optimized Header Nav ---------- */
+  /* ---------- Header Nav ---------- */
   header {
     position: sticky;
     top: 0;
@@ -229,7 +239,7 @@
     width: 100%;
   }
 
-  /* Monal Style Buttons */
+  /* Buttons */
   .btn {
     display: inline-flex;
     align-items: center;
@@ -246,7 +256,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
-    min-height: 48px; /* Mobile touch optimization */
+    min-height: 48px;
   }
 
   .btn:hover {
@@ -299,12 +309,34 @@
       padding: 24px 24px 32px;
       gap: 18px;
       display: none;
-      border-bottom: 1fr solid var(--border);
+      border-bottom: 1px solid var(--border);
       box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
     }
     nav.links.open { display: flex; }
     .menu-toggle { display: flex; align-items: center; justify-content: center; }
     .nav-cta { display: none; }
+  }
+
+  /* Phone input group with country code prefix */
+  .phone-input-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .country-code-select {
+    width: auto;
+    min-width: 135px;
+    max-width: 150px;
+    flex-shrink: 0;
+    padding: 14px 10px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 14px;
+    outline: none;
+    min-height: 48px;
+    cursor: pointer;
   }
 
   /* ---------- Hero Section ---------- */
@@ -377,18 +409,20 @@
     box-shadow: 0 0 10px var(--monal-emerald);
   }
 
+  /* Soft Lighter Tone Hero Form Box */
   .hero-panel {
-    background: var(--card-dark);
-    color: #FFFFFF;
+    background: #FFFFFF;
+    color: var(--text-main);
     border-radius: var(--radius-lg);
     padding: 36px;
     position: relative;
     z-index: 1;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--card-border);
   }
 
-  .hero-panel h3 { font-size: 20px; color: #FFFFFF; margin-bottom: 8px; }
-  .hero-panel p { color: #CBD5E1; font-size: 14.5px; margin: 0 0 24px; }
+  .hero-panel h3 { font-size: 20px; color: var(--text-main); margin-bottom: 8px; }
+  .hero-panel p { color: var(--text-dim); font-size: 14.5px; margin: 0 0 24px; }
   
   .quickform { display: flex; flex-direction: column; gap: 14px; }
   
@@ -396,9 +430,9 @@
     width: 100%;
     padding: 14px 16px;
     border-radius: var(--radius-sm);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.08);
-    color: #FFFFFF;
+    border: 1px solid var(--border-strong);
+    background: var(--bg-alt);
+    color: var(--text-main);
     font-family: var(--font-body);
     font-size: 14.5px;
     outline: none;
@@ -406,11 +440,11 @@
     min-height: 48px;
   }
 
-  .quickform select option { background: #1E1B4B; color: #FFFFFF; }
-  .quickform input::placeholder { color: #94A3B8; }
+  .quickform select option { background: #FFFFFF; color: var(--text-main); }
+  .quickform input::placeholder { color: var(--text-dimmer); }
   .quickform select:focus, .quickform input:focus {
-    border-color: var(--monal-blue);
-    box-shadow: 0 0 15px rgba(14, 165, 233, 0.4);
+    border-color: var(--monal-indigo);
+    box-shadow: 0 0 15px rgba(79, 70, 229, 0.2);
   }
 
   /* Stat Strip */
@@ -513,7 +547,7 @@
 
   section.alt { background: var(--bg-alt); }
 
-  /* ---------- Process Section ---------- */
+  /* ---------- Process Section (Breathing Headings in Blue/Purple) ---------- */
   .process-band {
     background: var(--bg-alt);
     border-top: 1px solid var(--border);
@@ -552,11 +586,21 @@
     font-weight: 600;
   }
 
-  .step h3 { font-size: 17.5px; margin-top: 16px; font-weight: 700; color: var(--text-main); }
+  /* Breathing animation & Blue-Purple Hue for Process Headings */
+  .step h3 {
+    font-size: 18px;
+    margin-top: 16px;
+    font-weight: 700;
+    color: var(--monal-indigo);
+    display: inline-block;
+    transform-origin: left center;
+    animation: breathing 4s ease-in-out infinite;
+  }
+
   .step p { color: var(--text-dim); font-size: 14px; margin-top: 10px; line-height: 1.55; }
 
   /* ==========================================================================
-     ---------- RevPro.One Card Stacking Section (Mobile Optimized) ----------
+     ---------- RevPro.One Card Stacking Section (Breathing Headings) ----------
      ========================================================================== */
   .sectors-stack-section {
     position: relative;
@@ -604,11 +648,26 @@
     font-weight: 600;
   }
 
+  /* Enlarged & Breathing Animated Heading */
   .sector-card h3 {
-    font-size: clamp(24px, 3.2vw, 36px);
+    font-size: clamp(28px, 3.8vw, 42px);
     margin-top: 10px;
     letter-spacing: -0.02em;
     color: var(--text-main);
+    display: inline-block;
+    transform-origin: left center;
+    animation: breathing 4s ease-in-out infinite;
+  }
+
+  @keyframes breathing {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.025);
+      opacity: 0.93;
+    }
   }
 
   .sector-card p.desc {
@@ -705,7 +764,7 @@
     background: var(--grad);
   }
 
-  /* ---------- Countries Grid ---------- */
+  /* ---------- Countries Grid (Expanded with European Countries) ---------- */
   .country-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -782,44 +841,13 @@
   .lic-row .lic { font-family: var(--font-mono); font-size: 13px; color: var(--monal-indigo); font-weight: 600; }
   .verified-badge { width: 18px; height: 18px; flex-shrink: 0; }
 
-  .license-tabs { margin-top: 28px; }
+  .license-tabs { margin-top: 28px; text-align: center; }
 
   .tab-btns {
     display: flex;
+    justify-content: center;
     gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 18px;
   }
-
-  .tab-btn {
-    font-family: var(--font-heading);
-    font-size: 13.5px;
-    font-weight: 600;
-    padding: 10px 18px;
-    border-radius: 100px;
-    border: 1px solid var(--border-strong);
-    background: #FFFFFF;
-    color: var(--text-dim);
-    cursor: pointer;
-    transition: all 0.25s ease;
-    min-height: 44px;
-  }
-
-  .tab-btn:hover { color: var(--monal-indigo); border-color: var(--monal-indigo); }
-  .tab-btn.active { background: var(--grad); color: #FFFFFF; border-color: transparent; box-shadow: 0 6px 18px rgba(79, 70, 229, 0.25); }
-
-  .tab-panel {
-    display: none;
-    background: var(--bg-alt);
-    border: 1px dashed var(--border-strong);
-    border-radius: var(--radius-sm);
-    padding: 36px 20px;
-    text-align: center;
-    color: var(--text-dimmer);
-    font-size: 14.5px;
-  }
-
-  .tab-panel.active { display: block; }
 
   /* ---------- Testimonials Section ---------- */
   .testi-grid {
@@ -984,7 +1012,7 @@
           </linearGradient>
         </defs>
       </svg>
-      <span class="brand-text">Munal Overseas<span>Pvt. Ltd. &nbsp;·&nbsp; Nepal</span></span>
+      <span class="brand-text">Munal Overseas<span>Pvt. Ltd. &nbsp;·&nbsp; 🇳🇵 Nepal</span></span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">&#9776;</button>
     <nav class="links" id="navLinks">
@@ -1007,35 +1035,84 @@
     <div>
       <div class="license-pill"><span class="dot"></span> Government-Registered Recruitment Agency, Nepal</div>
       <h1>Where Nepali talent<br>takes <span class="grad-text">flight</span>.</h1>
-      <p class="lead">Munal Overseas connects skilled, trade-tested Nepali workers with employers across the Gulf, Malaysia and beyond &mdash; through a fully licensed, transparent and ethical recruitment process.</p>
+      <p class="lead">Munal Overseas connects skilled, trade-tested Nepali workers with employers across the Gulf, Malaysia, Europe and beyond &mdash; through a fully licensed, transparent and ethical recruitment process.</p>
       <div class="hero-cta">
         <a href="#contact" class="btn btn-primary">Request Manpower</a>
         <a href="#industries" class="btn btn-outline">Explore Industries</a>
       </div>
     </div>
     
+    <!-- Lighter Tone Hero Form Box -->
     <div class="hero-panel">
       <h3>Looking for overseas work?</h3>
       <p>Tell us your trade and preferred destination &mdash; our team will reach out with current openings.</p>
       <form class="quickform" onsubmit="return false;">
+        <!-- Full 8 Sectors in Dropdown -->
         <select aria-label="Select industry">
-          <option>Select your trade / industry</option>
+          <option value="">Select your trade / industry</option>
           <option>Construction &amp; Infrastructure</option>
           <option>Hospitality &amp; Hotel</option>
           <option>Facility Management &amp; Cleaning</option>
           <option>Security Services</option>
           <option>Healthcare &amp; Caregiving</option>
           <option>Logistics &amp; Warehousing</option>
+          <option>Manufacturing &amp; Factory Work</option>
+          <option>Agriculture &amp; Plantation</option>
         </select>
-        <select aria-label="Select country">
-          <option>Preferred country</option>
-          <option>UAE</option>
-          <option>Qatar</option>
-          <option>Saudi Arabia</option>
-          <option>Kuwait</option>
-          <option>Malaysia</option>
+        
+        <!-- Preferred Country including European countries & Gulf/Malaysia -->
+        <select aria-label="Preferred country">
+          <option value="">Preferred country / region</option>
+          <optgroup label="Middle East &amp; Asia">
+            <option>UAE 🇦🇪</option>
+            <option>Qatar 🇶🇦</option>
+            <option>Saudi Arabia 🇸🇦</option>
+            <option>Kuwait 🇰🇼</option>
+            <option>Malaysia 🇲🇾</option>
+            <option>Bahrain 🇧🇭</option>
+            <option>Oman 🇴🇲</option>
+          </optgroup>
+          <optgroup label="European Countries">
+            <option>Romania 🇷🇴</option>
+            <option>Poland 🇵🇱</option>
+            <option>Croatia 🇭🇷</option>
+            <option>Portugal 🇵🇹</option>
+            <option>Malta 🇲🇹</option>
+            <option>Cyprus 🇨🇾</option>
+            <option>Hungary 🇭🇺</option>
+            <option>Czech Republic 🇨🇿</option>
+            <option>Germany 🇩🇪</option>
+            <option>United Kingdom 🇬🇧</option>
+          </optgroup>
         </select>
-        <input type="tel" placeholder="Your phone number">
+
+        <!-- Country Code prefix + Phone Number -->
+        <div class="phone-input-group">
+          <select class="country-code-select" aria-label="Select Country Code">
+            <option value="+977">🇳🇵 +977 (Nepal)</option>
+            <option value="+971">🇦🇪 +971 (UAE)</option>
+            <option value="+974">🇶🇦 +974 (Qatar)</option>
+            <option value="+966">🇸🇦 +966 (Saudi Arabia)</option>
+            <option value="+965">🇰🇼 +965 (Kuwait)</option>
+            <option value="+60">🇲🇾 +60 (Malaysia)</option>
+            <option value="+973">🇧🇭 +973 (Bahrain)</option>
+            <option value="+968">🇴🇲 +968 (Oman)</option>
+            <option value="+40">🇷🇴 +40 (Romania)</option>
+            <option value="+48">🇵🇱 +48 (Poland)</option>
+            <option value="+385">🇭🇷 +385 (Croatia)</option>
+            <option value="+351">🇵🇹 +351 (Portugal)</option>
+            <option value="+356">🇲🇹 +356 (Malta)</option>
+            <option value="+357">🇨🇾 +357 (Cyprus)</option>
+            <option value="+36">🇭🇺 +36 (Hungary)</option>
+            <option value="+420">🇨🇿 +420 (Czech Rep)</option>
+            <option value="+49">🇩🇪 +49 (Germany)</option>
+            <option value="+44">🇬🇧 +44 (UK)</option>
+            <option value="+91">🇮🇳 +91 (India)</option>
+            <option value="+1">🇺🇸 +1 (USA)</option>
+          </select>
+          <input type="tel" placeholder="Your phone number" aria-label="Your phone number">
+        </div>
+
         <button class="btn btn-primary" type="submit" style="justify-content:center;width:100%;">Notify Me of Openings</button>
       </form>
     </div>
@@ -1126,7 +1203,7 @@
 </section>
 
 <!-- ==========================================================================
-     ---------- RevPro.One Stacking Cards Carousel Section ----------
+     ---------- RevPro.One Card Stacking Section (Breathing Headings) ----------
      ========================================================================== -->
 <section class="sectors-stack-section alt" id="industries">
   <div class="glow" style="width:650px;height:650px;background:var(--monal-indigo);opacity:0.08;top:20%;left:50%;transform:translateX(-50%);"></div>
@@ -1146,7 +1223,7 @@
           <div>
             <div class="sector-card-badge">01 &nbsp;·&nbsp; Construction &amp; Infrastructure</div>
             <h3>Site labour built to <span class="grad-text">deliver on schedule.</span></h3>
-            <p class="desc">Trade-tested masons, steel fixers and helpers for construction and infrastructure sites across the Gulf and East Asia.</p>
+            <p class="desc">Trade-tested masons, steel fixers and helpers for construction and infrastructure sites across the Gulf, Malaysia, and Europe.</p>
             <div class="tag-row">
               <span class="tag">Masons</span>
               <span class="tag">Steel Fixers</span>
@@ -1304,14 +1381,19 @@
   </div>
 </section>
 
+<!-- ==========================================================================
+     ---------- Countries We Serve (Expanded GCC & European Countries) ----------
+     ========================================================================== -->
 <section id="countries">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Countries We Serve</div>
       <h2>Where our workers are deployed</h2>
-      <p>Active partnerships with licensed employers across the following international labour markets.</p>
+      <p>Active partnerships with licensed employers across the Gulf, Malaysia, and European labour markets.</p>
     </div>
+    
     <div class="country-grid">
+      <!-- GCC & Asia Row 1 & 2 -->
       <div class="country"><span class="flag">🇦🇪</span><div><strong>UAE</strong><span>Dubai &amp; Abu Dhabi</span></div></div>
       <div class="country"><span class="flag">🇶🇦</span><div><strong>Qatar</strong><span>Doha</span></div></div>
       <div class="country"><span class="flag">🇸🇦</span><div><strong>Saudi Arabia</strong><span>Riyadh &amp; Jeddah</span></div></div>
@@ -1319,7 +1401,17 @@
       <div class="country"><span class="flag">🇲🇾</span><div><strong>Malaysia</strong><span>Kuala Lumpur</span></div></div>
       <div class="country"><span class="flag">🇧🇭</span><div><strong>Bahrain</strong><span>Manama</span></div></div>
       <div class="country"><span class="flag">🇴🇲</span><div><strong>Oman</strong><span>Muscat</span></div></div>
+      
+      <!-- European Countries Row 2, 3 & 4 -->
       <div class="country"><span class="flag">🇷🇴</span><div><strong>Romania</strong><span>Bucharest</span></div></div>
+      <div class="country"><span class="flag">🇵🇱</span><div><strong>Poland</strong><span>Warsaw</span></div></div>
+      <div class="country"><span class="flag">🇭🇷</span><div><strong>Croatia</strong><span>Zagreb</span></div></div>
+      <div class="country"><span class="flag">🇵🇹</span><div><strong>Portugal</strong><span>Lisbon</span></div></div>
+      <div class="country"><span class="flag">🇲🇹</span><div><strong>Malta</strong><span>Valletta</span></div></div>
+      <div class="country"><span class="flag">🇨🇾</span><div><strong>Cyprus</strong><span>Nicosia</span></div></div>
+      <div class="country"><span class="flag">🇭🇺</span><div><strong>Hungary</strong><span>Budapest</span></div></div>
+      <div class="country"><span class="flag">🇨🇿</span><div><strong>Czech Republic</strong><span>Prague</span></div></div>
+      <div class="country"><span class="flag">🇩🇪</span><div><strong>Germany</strong><span>Berlin</span></div></div>
     </div>
   </div>
 </section>
@@ -1345,15 +1437,11 @@
           </svg>
         </div>
 
+        <!-- View Our License Link to second page (license.html) -->
         <div class="license-tabs">
-          <div class="tab-btns" role="tablist" aria-label="View our license documents">
-            <button class="tab-btn active" data-tab="dolep" type="button">View Our License</button>
-            <button class="tab-btn" data-tab="regcert" type="button">Company Registration Certificate</button>
-            <button class="tab-btn" data-tab="pan" type="button">PAN Certificate</button>
+          <div class="tab-btns">
+            <a href="license.html" target="_blank" class="btn btn-primary" style="min-height:46px;">View Our License</a>
           </div>
-          <div class="tab-panel active" id="tab-dolep">DoLEP recruitment license document will be uploaded here soon.</div>
-          <div class="tab-panel" id="tab-regcert">Company Registration Certificate will be uploaded here soon.</div>
-          <div class="tab-panel" id="tab-pan">PAN Certificate will be uploaded here soon.</div>
         </div>
       </div>
     </div>
@@ -1378,7 +1466,7 @@
       </div>
       <div class="testi">
         <p class="q">"Transparent process from the start &mdash; no hidden costs, clear timelines, and their team followed up with me even after I arrived."</p>
-        <div class="who"><strong>Sample Candidate Name</strong><span>Security Officer, Malaysia</span></div>
+        <div class="who"><strong>Sample Candidate Name</strong><span>Security Officer, Romania</span></div>
       </div>
     </div>
   </div>
@@ -1402,11 +1490,21 @@
       <h2 class="sec-head" style="margin-bottom:28px;margin-top:14px;">Get in touch</h2>
       <div class="office">
         <h3>Registered Office</h3>
-        <p>Munal Overseas Pvt. Ltd.<br>Kalimatidole, Airport, Kathmandu, Nepal<br>Tel: +977-1-4561297, 4562046<br>Email: munal465@gmail.com</p>
+        <p>Munal Overseas Pvt. Ltd.<br>Kalimatidole, Airport, Kathmandu, Nepal<br>Tel: +977-1-4561297, 4562046<br>Email: <a href="mailto:munal465@gmail.com" class="email-link">munal465@gmail.com</a></p>
       </div>
       <div class="office">
         <h3>Office Hours</h3>
         <p>Monday to Friday, 9:00 AM &ndash; 5:00 PM (GMT+5:45)</p>
+      </div>
+      <!-- Google Map Location -->
+      <div class="office">
+        <h3>Google Map Location</h3>
+        <p style="margin-top:8px;">
+          <a href="https://share.google/HkMueZikEvHwQKl5E" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="min-height:42px;padding:10px 20px;font-size:13.5px;display:inline-flex;">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            View Location on Google Maps
+          </a>
+        </p>
       </div>
     </div>
     
@@ -1414,7 +1512,73 @@
       <form class="form-row" onsubmit="return false;">
         <input type="text" placeholder="Full name" required aria-label="Full name">
         <input type="email" placeholder="Email address" required aria-label="Email address">
-        <input type="tel" placeholder="Mobile number" required aria-label="Mobile number">
+        
+        <!-- Full 8 Sectors in Contact Form -->
+        <select aria-label="Select trade/industry">
+          <option value="">Select your trade / industry</option>
+          <option>Construction &amp; Infrastructure</option>
+          <option>Hospitality &amp; Hotel</option>
+          <option>Facility Management &amp; Cleaning</option>
+          <option>Security Services</option>
+          <option>Healthcare &amp; Caregiving</option>
+          <option>Logistics &amp; Warehousing</option>
+          <option>Manufacturing &amp; Factory Work</option>
+          <option>Agriculture &amp; Plantation</option>
+        </select>
+
+        <!-- Preferred Country Dropdown -->
+        <select aria-label="Preferred destination country">
+          <option value="">Preferred country / region</option>
+          <optgroup label="Middle East &amp; Asia">
+            <option>UAE 🇦🇪</option>
+            <option>Qatar 🇶🇦</option>
+            <option>Saudi Arabia 🇸🇦</option>
+            <option>Kuwait 🇰🇼</option>
+            <option>Malaysia 🇲🇾</option>
+            <option>Bahrain 🇧🇭</option>
+            <option>Oman 🇴🇲</option>
+          </optgroup>
+          <optgroup label="European Countries">
+            <option>Romania 🇷🇴</option>
+            <option>Poland 🇵🇱</option>
+            <option>Croatia 🇭🇷</option>
+            <option>Portugal 🇵🇹</option>
+            <option>Malta 🇲🇹</option>
+            <option>Cyprus 🇨🇾</option>
+            <option>Hungary 🇭🇺</option>
+            <option>Czech Republic 🇨🇿</option>
+            <option>Germany 🇩🇪</option>
+            <option>United Kingdom 🇬🇧</option>
+          </optgroup>
+        </select>
+
+        <!-- Country Code prefix + Phone Number -->
+        <div class="phone-input-group">
+          <select class="country-code-select" aria-label="Select Country Code">
+            <option value="+977">🇳🇵 +977 (Nepal)</option>
+            <option value="+971">🇦🇪 +971 (UAE)</option>
+            <option value="+974">🇶🇦 +974 (Qatar)</option>
+            <option value="+966">🇸🇦 +966 (Saudi Arabia)</option>
+            <option value="+965">🇰🇼 +965 (Kuwait)</option>
+            <option value="+60">🇲🇾 +60 (Malaysia)</option>
+            <option value="+973">🇧🇭 +973 (Bahrain)</option>
+            <option value="+968">🇴🇲 +968 (Oman)</option>
+            <option value="+40">🇷🇴 +40 (Romania)</option>
+            <option value="+48">🇵🇱 +48 (Poland)</option>
+            <option value="+385">🇭🇷 +385 (Croatia)</option>
+            <option value="+351">🇵🇹 +351 (Portugal)</option>
+            <option value="+356">🇲🇹 +356 (Malta)</option>
+            <option value="+357">🇨🇾 +357 (Cyprus)</option>
+            <option value="+36">🇭🇺 +36 (Hungary)</option>
+            <option value="+420">🇨🇿 +420 (Czech Rep)</option>
+            <option value="+49">🇩🇪 +49 (Germany)</option>
+            <option value="+44">🇬🇧 +44 (UK)</option>
+            <option value="+91">🇮🇳 +91 (India)</option>
+            <option value="+1">🇺🇸 +1 (USA)</option>
+          </select>
+          <input type="tel" placeholder="Mobile number" required aria-label="Mobile number">
+        </div>
+
         <select aria-label="I am an...">
           <option value="">I am a...</option>
           <option value="employer">Employer</option>
@@ -1445,6 +1609,7 @@
           <span class="brand-text">Munal Overseas</span>
         </div>
         <p style="font-size:14px;max-width:32ch;line-height:1.6;">Government-registered manpower recruitment agency connecting Nepali workers with employers worldwide.</p>
+        <p style="font-size:13.5px;margin-top:10px;">Email: <a href="mailto:munal465@gmail.com" class="email-link" style="color:#CBD5E1;">munal465@gmail.com</a></p>
       </div>
       
       <div>
@@ -1496,16 +1661,6 @@
     a.addEventListener('click', function(){ document.getElementById('navLinks').classList.remove('open'); });
   });
 
-  /* Compliance license tabs */
-  document.querySelectorAll('.tab-btn').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
-      document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
-      btn.classList.add('active');
-      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
-    });
-  });
-
   /* ==========================================================================
      ---------- RevPro.One Stacking Cards Carousel Animation Engine ----------
      ========================================================================== */
@@ -1515,7 +1670,6 @@
     var counterEl = document.getElementById('stackCounter');
     if(!cards.length) return;
 
-    // Create navigation dots
     cards.forEach(function(_, i){
       var dot = document.createElement('div');
       dot.className = 'sector-stack-dot' + (i === 0 ? ' active' : '');
@@ -1525,7 +1679,7 @@
 
     function updateCardStacking(){
       var isMobile = window.innerWidth <= 860;
-      var stickyTop = isMobile ? 80 : 110; // Mobile vs Desktop header offset
+      var stickyTop = isMobile ? 80 : 110;
       var activeIdx = 0;
 
       cards.forEach(function(card, idx){
@@ -1537,7 +1691,6 @@
           var nextRect = nextCard.getBoundingClientRect();
           var progress = Math.max(0, Math.min(1, (stickyTop + 250 - nextRect.top) / 250));
           
-          // Apply scaling and slight vertical push as card N+1 slides over card N
           var scale = 1 - (progress * (isMobile ? 0.04 : 0.05));
           var translateY = -progress * (isMobile ? 10 : 15);
           var opacity = 1 - (progress * 0.1);
@@ -1554,7 +1707,6 @@
         }
       });
 
-      // Update dots & counter
       dots.forEach(function(d, i){ d.classList.toggle('active', i === activeIdx); });
       if (counterEl) {
         var formattedNum = (activeIdx + 1 < 10 ? '0' : '') + (activeIdx + 1);
