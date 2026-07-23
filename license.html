@@ -18,25 +18,25 @@
     --card-border: rgba(99, 102, 241, 0.14);
     --border: rgba(148, 163, 184, 0.2);
     --border-strong: rgba(99, 102, 241, 0.25);
-    
+
     --monal-blue: #0EA5E9;
     --monal-indigo: #4F46E5;
     --monal-purple: #8B5CF6;
     --monal-emerald: #10B981;
-    
+
     --grad: linear-gradient(135deg, #0EA5E9 0%, #4F46E5 50%, #8B5CF6 100%);
     --grad-pill: linear-gradient(135deg, rgba(14, 165, 233, 0.12) 0%, rgba(139, 92, 246, 0.12) 100%);
     --grad-text: linear-gradient(135deg, #0284C7 0%, #4F46E5 50%, #7C3AED 100%);
-    
+
     --text-main: #0F172A;
     --text-dim: #475569;
     --text-dimmer: #64748B;
     --white: #FFFFFF;
-    
+
     --shadow-sm: 0 4px 15px rgba(79, 70, 229, 0.05);
     --shadow-md: 0 12px 30px rgba(79, 70, 229, 0.08);
     --shadow-lg: 0 25px 60px rgba(15, 23, 42, 0.12);
-    
+
     --radius-lg: 24px;
     --radius: 16px;
     --radius-sm: 10px;
@@ -287,7 +287,7 @@
 
 <section class="license-section">
   <div class="wrap">
-    
+
     <!-- 3 Document Tabs -->
     <div class="tabs-container">
       <button class="tab-button active" onclick="showDoc('dolep', this)">DoLEP Certificate</button>
@@ -297,7 +297,7 @@
 
     <!-- Document Display Card Container -->
     <div class="doc-display-card">
-      
+
       <!-- 1. DoLEP Certificate Panel -->
       <div id="doc-dolep" class="doc-panel">
         <div class="doc-header">
@@ -309,11 +309,11 @@
         </div>
 
         <div class="doc-preview-frame">
-          <img class="doc-img" src="../legal docs/DoLEP.jpeg" alt="DoLEP License Certificate - Munal Overseas Pvt. Ltd.">
+          <img class="doc-img" src="DoLEP.jpeg" alt="DoLEP License Certificate - Munal Overseas Pvt. Ltd.">
         </div>
 
         <div class="doc-actions">
-          <a href="../legal docs/DoLEP.jpeg" target="_blank" class="btn btn-primary">&boxbox; View Full Resolution Image</a>
+          <a href="DoLEP.jpeg" target="_blank" class="btn btn-primary">&boxbox; View Full Resolution Image</a>
           <a href="index.html#contact" class="btn btn-outline">Submit Manpower Demand</a>
         </div>
       </div>
@@ -329,11 +329,11 @@
         </div>
 
         <div class="doc-preview-frame">
-          <img class="doc-img" src="../legal docs/Certificate of Company Registration.jpeg" alt="Company Registration Certificate - Munal Overseas Pvt. Ltd.">
+          <img class="doc-img" src="Certificate of Company Registration.jpeg" alt="Company Registration Certificate - Munal Overseas Pvt. Ltd.">
         </div>
 
         <div class="doc-actions">
-          <a href="../legal docs/Certificate of Company Registration.jpeg" target="_blank" class="btn btn-primary">&boxbox; View Full Resolution Image</a>
+          <a href="Certificate of Company Registration.jpeg" target="_blank" class="btn btn-primary">&boxbox; View Full Resolution Image</a>
           <a href="index.html#contact" class="btn btn-outline">Submit Manpower Demand</a>
         </div>
       </div>
@@ -349,11 +349,11 @@
         </div>
 
         <div class="doc-preview-frame">
-          <img class="doc-img" src="../legal docs/PAN Certificate.jpeg" alt="PAN Tax Registration Certificate - Munal Overseas Pvt. Ltd.">
+          <img class="doc-img" src="PAN Certificate.jpeg" alt="PAN Tax Registration Certificate - Munal Overseas Pvt. Ltd.">
         </div>
 
         <div class="doc-actions">
-          <a href="../legal docs/PAN Certificate.jpeg" target="_blank" class="btn btn-primary">&boxbox; View Full Resolution Image</a>
+          <a href="PAN Certificate.jpeg" target="_blank" class="btn btn-primary">&boxbox; View Full Resolution Image</a>
           <a href="index.html#contact" class="btn btn-outline">Submit Manpower Demand</a>
         </div>
       </div>
@@ -373,7 +373,7 @@
   function showDoc(docId, btnEl) {
     document.querySelectorAll('.tab-button').forEach(function(b){ b.classList.remove('active'); });
     document.querySelectorAll('.doc-panel').forEach(function(p){ p.style.display = 'none'; });
-    
+
     btnEl.classList.add('active');
     document.getElementById('doc-' + docId).style.display = 'block';
   }
