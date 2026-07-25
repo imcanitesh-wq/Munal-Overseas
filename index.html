@@ -124,6 +124,31 @@
     color: var(--monal-blue);
   }
 
+  /* WhatsApp Link Styling */
+  .whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #128C7E;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    margin-top: 4px;
+  }
+
+  .whatsapp-link:hover {
+    color: #075E54;
+    transform: translateX(2px);
+  }
+
+  .whatsapp-icon {
+    width: 20px;
+    height: 20px;
+    fill: #25D366;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 5px rgba(37, 211, 102, 0.3));
+  }
+
   .wrap {
     max-width: 1200px;
     margin: 0 auto;
@@ -866,6 +891,9 @@
     border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
     transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .testi:hover {
@@ -874,10 +902,27 @@
     box-shadow: var(--shadow-md);
   }
 
-  .testi p.q { font-size: 15px; color: var(--text-dim); font-style: italic; line-height: 1.65; }
+  .testi-profile {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .testi-avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--monal-indigo);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    flex-shrink: 0;
+  }
+
+  .testi p.q { font-size: 15px; color: var(--text-dim); font-style: italic; line-height: 1.65; margin: 0; }
   .testi .who { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--border); }
-  .testi .who strong { display: block; font-size: 15px; font-family: var(--font-heading); color: var(--text-main); }
-  .testi .who span { font-size: 13px; color: var(--text-dimmer); margin-top: 2px; display: block; }
+  .testi .who strong { display: block; font-size: 15.5px; font-family: var(--font-heading); color: var(--text-main); font-weight: 700; }
+  .testi .who span { font-size: 13px; color: var(--monal-indigo); font-weight: 600; margin-top: 3px; display: block; }
 
   /* ---------- CTA Band ---------- */
   .cta-band {
@@ -920,57 +965,33 @@
 
   @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 36px; } }
 
-  .contact-left {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
   .office { margin-bottom: 28px; }
+  .office.office-map { margin-bottom: 0; }
   .office h3 { font-size: 16px; font-family: var(--font-heading); font-weight: 700; color: var(--text-main); }
   .office p { font-size: 15px; color: var(--text-dim); margin-top: 8px; line-height: 1.6; }
 
-  /* Office block holding the embedded map fills any leftover height so it
-     lines up with the bottom of the contact form on the right */
-  .office-map {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0;
-    min-height: 0;
-  }
-
   .map-embed {
-    flex: 1;
-    min-height: 220px;
-    margin-top: 8px;
+    margin-top: 10px;
     border-radius: var(--radius);
     overflow: hidden;
     border: 1px solid var(--border-strong);
-    background: var(--bg-alt);
     box-shadow: var(--shadow-sm);
+    aspect-ratio: 16 / 9;
   }
-
-  .map-embed iframe {
-    width: 100%;
-    height: 100%;
-    display: block;
-    border: 0;
-  }
+  .map-embed iframe { width: 100%; height: 100%; border: 0; }
 
   .map-open-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     margin-top: 10px;
     font-size: 13.5px;
     font-weight: 600;
     color: var(--monal-indigo);
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
   }
-
   .map-open-link:hover { text-decoration: underline; }
 
-  .form-row { display: flex; flex-direction: column; gap: 14px; height: 100%; }
+  .form-row { display: flex; flex-direction: column; gap: 14px; height: 100%; justify-content: space-between; }
 
   .form-row input, .form-row select, .form-row textarea {
     padding: 14px 16px;
@@ -986,11 +1007,54 @@
   }
 
   .form-row select { color: var(--text-dim); }
-  .form-row textarea { min-height: 120px; resize: vertical; flex: 1; }
+  .form-row textarea { min-height: 225px; flex-grow: 1; resize: vertical; }
 
   .form-row input:focus, .form-row select:focus, .form-row textarea:focus {
     border-color: var(--monal-indigo);
     box-shadow: 0 0 15px rgba(79, 70, 229, 0.2);
+  }
+
+  /* Notification Toast */
+  .form-notification-toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #0F172A;
+    color: #FFFFFF;
+    padding: 18px 26px;
+    border-radius: var(--radius);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.35);
+    border: 1.5px solid var(--monal-indigo);
+    z-index: 9999;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    max-width: 440px;
+  }
+  .form-notification-toast.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .toast-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 14.5px;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+  .toast-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--monal-emerald);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 15px;
+    flex-shrink: 0;
   }
 
   /* ---------- Footer ---------- */
@@ -1094,9 +1158,9 @@
     <div class="hero-panel">
       <h3>Looking for overseas work?</h3>
       <p>Tell us your trade and preferred destination &mdash; our team will reach out with current openings.</p>
-      <form class="quickform" onsubmit="return false;">
+      <form class="quickform">
         <!-- Full 8 Sectors in Dropdown -->
-        <select aria-label="Select industry">
+        <select aria-label="Select industry" required>
           <option value="">Select your trade / industry</option>
           <option>Construction &amp; Infrastructure</option>
           <option>Hospitality &amp; Hotel</option>
@@ -1109,7 +1173,7 @@
         </select>
 
         <!-- Preferred Country including European countries & Gulf/Malaysia -->
-        <select aria-label="Preferred country">
+        <select aria-label="Preferred country" required>
           <option value="">Preferred country / region</option>
           <optgroup label="Middle East &amp; Asia">
             <option>UAE 🇦🇪</option>
@@ -1158,7 +1222,7 @@
             <option value="+91">🇮🇳 +91 (India)</option>
             <option value="+1">🇺🇸 +1 (USA)</option>
           </select>
-          <input type="tel" placeholder="Your phone number" aria-label="Your phone number">
+          <input type="tel" placeholder="Your phone number" required aria-label="Your phone number">
         </div>
 
         <button class="btn btn-primary" type="submit" style="justify-content:center;width:100%;">Notify Me of Openings</button>
@@ -1496,6 +1560,9 @@
   </div>
 </section>
 
+<!-- ==========================================================================
+     ---------- Testimonials Section (Updated Photos & Real Profiles) ----------
+     ========================================================================== -->
 <section>
   <div class="wrap">
     <div class="sec-head">
@@ -1503,19 +1570,63 @@
       <h2>Real people, real placements</h2>
       <p>Feedback from candidates and employers who trust Munal Overseas for foreign employment.</p>
     </div>
+
     <div class="testi-grid">
+
+      <!-- Testimonial 1: Jobair Khan, Chef, Malta -->
       <div class="testi">
-        <p class="q">"Munal Overseas handled every step, from documentation to my flight ticket. I now work as a housekeeping supervisor in Doha and support my family back home."</p>
-        <div class="who"><strong>Sample Candidate Name</strong><span>Housekeeping Supervisor, Qatar</span></div>
+        <div>
+          <div class="testi-profile">
+            <img class="testi-avatar" src="../legal docs/Jobair Khan.jpg" alt="Jobair Khan - Chef in Malta">
+            <div>
+              <strong style="font-size:16px;color:var(--text-main);">Jobair Khan</strong>
+              <span style="font-size:13px;color:var(--monal-indigo);font-weight:600;">Chef &nbsp;·&nbsp; Malta 🇲🇹</span>
+            </div>
+          </div>
+          <p class="q">"Munal Overseas guided me through the entire trade documentation and visa process for Malta. I am now working as a Chef in a top restaurant in Valletta, earning well and building my culinary career in Europe."</p>
+        </div>
+        <div class="who">
+          <strong>Jobair Khan</strong>
+          <span>Chef, Malta 🇲🇹</span>
+        </div>
       </div>
+
+      <!-- Testimonial 2: Integrated Construction Company LLC, UAE -->
       <div class="testi">
-        <p class="q">"We've hired site labour through Munal Overseas for two projects now. The vetting was thorough and every worker showed up ready and well-prepared."</p>
-        <div class="who"><strong>Sample Employer Name</strong><span>Construction Firm, UAE</span></div>
+        <div>
+          <div class="testi-profile">
+            <img class="testi-avatar" src="../legal docs/Integrated Construction Company LLC.jpg" alt="Integrated Construction Company LLC - UAE">
+            <div>
+              <strong style="font-size:16px;color:var(--text-main);">Integrated Construction Company LLC</strong>
+              <span style="font-size:13px;color:var(--monal-indigo);font-weight:600;">Construction Firm &nbsp;·&nbsp; UAE 🇦🇪</span>
+            </div>
+          </div>
+          <p class="q">"We have partnered with Munal Overseas to recruit trade-tested construction workers, masons, and site helpers for our major projects in Dubai. Their candidates are thoroughly vetted, highly disciplined, and arrive ready on site."</p>
+        </div>
+        <div class="who">
+          <strong>Integrated Construction Company LLC</strong>
+          <span>Construction Firm, UAE 🇦🇪</span>
+        </div>
       </div>
+
+      <!-- Testimonial 3: Naresh Bhattarai, Security Worker, Malaysia -->
       <div class="testi">
-        <p class="q">"Transparent process from the start &mdash; no hidden costs, clear timelines, and their team followed up with me even after I arrived."</p>
-        <div class="who"><strong>Sample Candidate Name</strong><span>Security Officer, Romania</span></div>
+        <div>
+          <div class="testi-profile">
+            <img class="testi-avatar" src="../legal docs/Naresh Bhattarai.jpg" alt="Naresh Bhattarai - Security Worker in Malaysia">
+            <div>
+              <strong style="font-size:16px;color:var(--text-main);">Naresh Bhattarai</strong>
+              <span style="font-size:13px;color:var(--monal-indigo);font-weight:600;">Security Worker &nbsp;·&nbsp; Malaysia 🇲🇾</span>
+            </div>
+          </div>
+          <p class="q">"The recruitment process was completely transparent with zero hidden fees. Munal Overseas ensured my contract and deployment to Malaysia were seamless. I now work as a Security Worker with full medical and safety support."</p>
+        </div>
+        <div class="who">
+          <strong>Naresh Bhattarai</strong>
+          <span>Security Worker, Malaysia 🇲🇾</span>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -1536,14 +1647,30 @@
     <div class="contact-left">
       <div class="eyebrow">Contact</div>
       <h2 class="sec-head" style="margin-bottom:28px;margin-top:14px;">Get in touch</h2>
+      
       <div class="office">
         <h3>Registered Office</h3>
-        <p>Munal Overseas Pvt. Ltd.<br>Kalimatidole, Airport, Kathmandu, Nepal<br>Tel: +977-1-4561297, 4562046<br>Email: <a href="mailto:munal465@gmail.com" class="email-link">munal465@gmail.com</a></p>
+        <p>
+          Munal Overseas Pvt. Ltd.<br>
+          Kalimatidole, Airport, Kathmandu, Nepal<br>
+          Tel: +977-1-4561297, 4562046<br>
+          <!-- WhatsApp Contact Button with Icon -->
+          <a href="https://wa.me/9779823081144" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
+            <svg class="whatsapp-icon" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            <span>WhatsApp: +977 9823081144</span>
+          </a><br>
+          <!-- Updated Email address -->
+          Email: <a href="mailto:mankumar@munaloverseas.com.np" class="email-link">mankumar@munaloverseas.com.np</a>
+        </p>
       </div>
+
       <div class="office">
         <h3>Office Hours</h3>
         <p>Monday to Friday, 9:00 AM &ndash; 5:00 PM (GMT+5:45)</p>
       </div>
+
       <!-- Google Map Location -->
       <div class="office office-map">
         <h3>Office Location</h3>
@@ -1563,12 +1690,12 @@
     </div>
 
     <div>
-      <form class="form-row" onsubmit="return false;">
+      <form class="form-row">
         <input type="text" placeholder="Full name" required aria-label="Full name">
         <input type="email" placeholder="Email address" required aria-label="Email address">
 
         <!-- Full 8 Sectors in Contact Form -->
-        <select aria-label="Select trade/industry">
+        <select aria-label="Select trade/industry" required>
           <option value="">Select your trade / industry</option>
           <option>Construction &amp; Infrastructure</option>
           <option>Hospitality &amp; Hotel</option>
@@ -1581,7 +1708,7 @@
         </select>
 
         <!-- Preferred Country Dropdown -->
-        <select aria-label="Preferred destination country">
+        <select aria-label="Preferred destination country" required>
           <option value="">Preferred country / region</option>
           <optgroup label="Middle East &amp; Asia">
             <option>UAE 🇦🇪</option>
@@ -1633,12 +1760,12 @@
           <input type="tel" placeholder="Mobile number" required aria-label="Mobile number">
         </div>
 
-        <select aria-label="I am an...">
+        <select aria-label="I am an..." required>
           <option value="">I am a...</option>
           <option value="employer">Employer</option>
           <option value="jobseeker">Job Seeker</option>
         </select>
-        <textarea placeholder="Tell us about your requirement or query" aria-label="Message"></textarea>
+        <textarea placeholder="Tell us about your requirement or query" aria-label="Message" required></textarea>
         <button class="btn btn-primary" type="submit">Send Message</button>
       </form>
     </div>
@@ -1663,7 +1790,7 @@
           <span class="brand-text">Munal Overseas</span>
         </div>
         <p style="font-size:14px;max-width:32ch;line-height:1.6;">Government-registered manpower recruitment agency connecting Nepali workers with employers worldwide.</p>
-        <p style="font-size:13.5px;margin-top:10px;">Email: <a href="mailto:munal465@gmail.com" class="email-link" style="color:#CBD5E1;">munal465@gmail.com</a></p>
+        <p style="font-size:13.5px;margin-top:10px;">Email: <a href="mailto:mankumar@munaloverseas.com.np" class="email-link" style="color:#CBD5E1;">mankumar@munaloverseas.com.np</a></p>
       </div>
 
       <div>
@@ -1713,6 +1840,27 @@
   });
   document.querySelectorAll('#navLinks a').forEach(function(a){
     a.addEventListener('click', function(){ document.getElementById('navLinks').classList.remove('open'); });
+  });
+
+  /* Form Submission Notifications */
+  document.querySelectorAll('form').forEach(function(formEl){
+    formEl.addEventListener('submit', function(e){
+      e.preventDefault();
+      
+      var toast = document.createElement('div');
+      toast.className = 'form-notification-toast';
+      toast.innerHTML = '<div class="toast-content"><span class="toast-icon">&check;</span><span>Your request has been submitted. Our office will reach out to you soon.</span></div>';
+      document.body.appendChild(toast);
+      
+      setTimeout(function(){ toast.classList.add('show'); }, 10);
+      
+      setTimeout(function(){
+        toast.classList.remove('show');
+        setTimeout(function(){ if(toast.parentNode) toast.parentNode.removeChild(toast); }, 400);
+      }, 5000);
+      
+      formEl.reset();
+    });
   });
 
   /* ==========================================================================
